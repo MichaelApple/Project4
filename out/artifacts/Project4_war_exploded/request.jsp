@@ -13,8 +13,8 @@
 <body>
 <jsp:useBean id="userRequest" class="models.entity.Request" scope="application"/>
 
-    <h1>${requestScope.time}</h1>
-    <h1>${requestScope.now}</h1>
+    <%--<h1>${requestScope.time}</h1>--%>
+    <%--<h1>${requestScope.now}</h1>--%>
 
     <h1>${userRequest.toString()}</h1>
 </body>

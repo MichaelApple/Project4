@@ -16,7 +16,7 @@ public class ConnectionProvider {
 
     public static Connection getConnection() {
         try {
-            ic = new javax.naming.InitialContext();
+            ic = new InitialContext();
             ds = (DataSource) ic.lookup("jdbc/Project4");
             connection = ds.getConnection();
 

@@ -33,51 +33,37 @@
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="index.jsp"><fmt:message key="navbar.project4"/></a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.jsp"><fmt:message key="navbar.home" /><span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Change language
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-                    <a class="dropdown-item" href="?language=en">English</a>
-                    <a class="dropdown-item" href="?language=ua">Українська</a>
-                </div>
-            </li>
+        </ul>
+        <ul class="navbar-nav">
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><fmt:message key="navbar.login"/><span class="caret"></span></a>
                 <ul id="login-dp" class="dropdown-menu">
                     <li>
                         <div class="row">
                             <div class="col-md-12">
-                                <form class="form" role="form" method="post" action="LoginServlet" accept-charset="UTF-8" id="login-nav1">
+                                <form class="form" role="form" method="post" action="Login" accept-charset="UTF-8" id="login-nav1">
                                     <div class="form-group">
-                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                        <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                        <label class="sr-only" for="exampleInputEmail2"><fmt:message key="navbar.login.email"/></label>
+                                        <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="<fmt:message key="navbar.login.email"/>" required>
                                     </div>
                                     <div class="form-group">
-                                        <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                        <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                        <label class="sr-only" for="exampleInputPassword2"><fmt:message key="navbar.login.password"/></label>
+                                        <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="<fmt:message key="navbar.login.password"/>" required>
                                         <div class="help-block text-right"><a href="">Forget the password ?</a></div>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                        <button type="submit" class="btn btn-primary btn-block"><fmt:message key="navbar.login.login"/></button>
                                     </div>
                                 </form>
                             </div>
                             <div class="bottom text-center">
-                                <a href="Logout">Logout</a>
+                                <a href="Logout"><fmt:message key="navbar.login.logout"/></a>
                             </div>
                         </div>
                     </li>
@@ -85,6 +71,14 @@
             </li>
             <li class="nav-item" >
                 <a class="nav-link" data-toggle="modal" data-target="#largeShoes" href="#"><fmt:message key="navbar.register"/></a>
+            </li>
+            <li class="nav-item">
+                <form>
+                    <select id="language" class="custom-select" name="language" onchange="submit()">
+                        <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
+                        <option value="ua" ${language == 'ua' ? 'selected' : ''}>Українська</option>
+                    </select>
+                </form>
             </li>
         </ul>
     </div>
@@ -101,7 +95,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="modalLabelLarge">Registration From</h4>
+                <h4 class="modal-title" id="modalLabelLarge"><fmt:message key="registration.header"/></h4>
             </div>
 
             <div class="modal-body">

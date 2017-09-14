@@ -11,14 +11,14 @@ import javax.servlet.annotation.WebFilter;
 @WebFilter(filterName = "LogFilter")
 public class LogFilter implements javax.servlet.Filter {
 
-    //private final static Logger logger = Logger.getLogger(LogFilter.class);
+    
 
     public void destroy() {
     }
 
     public void doFilter(javax.servlet.ServletRequest req, javax.servlet.ServletResponse resp, javax.servlet.FilterChain chain) throws javax.servlet.ServletException, java.io.IOException {
-
-        //logger.info("This is my first log message");
+        req.setCharacterEncoding("UTF-8");
+        
         chain.doFilter(req, resp);
     }
 

@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 /**
  * Created by Miha on 05.09.2017.
@@ -18,26 +19,34 @@ public class UserDao {
     public static int register(User user) {
         int status = 0;
         if (getUserByEmail(user.getEmail()) != null) return 0;
+
+        PreparedStatement ps = null;
         try (Connection connection = ConnectionProvider.getConnection()){
 
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO users(username, email, password) VALUES (?,?,?)");
+            ps = connection.prepareStatement("INSERT INTO users(username, email, password, auth_lvl) VALUES (?,?,?,?)");
             ps.setString(1, user.getUserName());
             ps.setString(2, user.getEmail());
             ps.setString(3, getHash(user.getPassword()));
-
+            ps.setInt(4, 1);
             status = ps.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (ps != null) try {
+                ps.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return status;
     }
 
     public static User getUserByEmail(String email) {
         User user = new User();
-
+        PreparedStatement ps = null;
         try(Connection connection = ConnectionProvider.getConnection()) {
-            PreparedStatement ps = connection.prepareStatement("SELECT * FROM users WHERE email = ?");
+            ps = connection.prepareStatement("SELECT * FROM users WHERE email = ?");
             ps.setString(1, email);
             ResultSet resultSet = ps.executeQuery();
 
@@ -50,6 +59,14 @@ public class UserDao {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return user;
     }
@@ -92,6 +109,5 @@ public class UserDao {
 
         return password_verified;
     }
-
 
 }

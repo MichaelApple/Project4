@@ -9,6 +9,7 @@ public class User {
     private String userName;
     private String email;
     private String password;
+    private int auth_lvl;
 
     public int getId() {
         return id;
@@ -40,5 +41,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getAuth_lvl() {
+        return auth_lvl;
+    }
+
+    public void setAuth_lvl(int auth_lvl) {
+        this.auth_lvl = auth_lvl;
     }
 }

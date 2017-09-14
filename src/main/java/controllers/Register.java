@@ -5,9 +5,7 @@ import dao.UserDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -18,9 +16,6 @@ import java.io.PrintWriter;
 public class Register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
         String name = request.getParameter("name");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
@@ -29,16 +24,20 @@ public class Register extends HttpServlet {
         user.setUserName(name);
         user.setEmail(email);
         user.setPassword(password);
+        user.setAuth_lvl(1);
 
         int status = UserDao.register(user);
 
         if (status == 1) {
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+            Cookie userName = new Cookie("user", email);
+            response.addCookie(userName);
             request.setAttribute("user", user);
         } else {
             request.setAttribute("userExist", "Such user already exist");
         }
         request.getRequestDispatcher("index.jsp").forward(request, response);
-        out.close();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

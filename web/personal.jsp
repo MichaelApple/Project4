@@ -6,8 +6,8 @@
     <h1>${requestScope.get("userExist")}</h1>
 
     <div class="container">
-        <h1 align="center">Hello, ${user.userName}</h1>
-        <p>It is yor personal cabinet. You can change your data or create new request.</p>
+        <h1 align="center"><fmt:message key="personal.hello"/> ${user.userName}</h1>
+        <p><fmt:message key="personal.info"/></p>
         <a href="index.jsp">Create new Request</a>
     </div>
 
@@ -15,11 +15,11 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="container myContainer">
-                    <h2 align="center">Hello, ${user.userName}</h2>
+                    <h2 align="center"><fmt:message key="index.hello"/> ${user.userName}</h2>
                     <h4>Your
                         <c:choose>
                             <c:when test="${empty param.newEmail}">
-                                email: ${user.email}
+                                email: ${sessionScope.user.email}
                             </c:when>
                             <c:otherwise>
                                 <b>new email: ${param.newEmail}</b>
@@ -30,14 +30,14 @@
             </div>
             <div class="col-sm-8">
                 <div class="container myContainer">
-                    <h1>Change your email</h1>
+                    <h1><fmt:message key="personal.change.email"/></h1>
                     <form action="ChangeEmail" method="post">
                         <div class="form-group">
-                            <label for="newEmail">Enter your new Email:</label>
+                            <label for="newEmail"><fmt:message key="personal.change.newemail"/></label>
                             <input type="email" class="form-control" name="newEmail" id="newEmail">
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary" value="Change Password">
+                            <input type="submit" class="btn btn-primary" value="Change Data">
                         </div>
                     </form>
                 </div>

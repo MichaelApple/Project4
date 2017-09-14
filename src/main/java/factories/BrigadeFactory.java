@@ -15,7 +15,7 @@ public class BrigadeFactory implements BrigadeAbstractFactory{
     @Override
     public Brigade createBrigade(WorkKind workKind, WorkScale workScale) {
         Brigade brigade;
-        
+
         switch (workKind) {
             case BUILDING: {
                 brigade = new BuildingBrigade();

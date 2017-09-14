@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Created by Miha on 03.09.2017.
  */
-@WebServlet(name = "LoginServlet", urlPatterns = "/LoginServlet")
+@WebServlet(name = "LoginServlet", urlPatterns = "/Login")
 public class LoginServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -38,12 +38,11 @@ public class LoginServlet extends HttpServlet {
             } else {
                 request.setAttribute("error", "Email or password did not match");
                 request.getRequestDispatcher("index.jsp").forward(request, response);
-
             }
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.getRequestDispatcher("personal.jsp").forward(request, response);
     }
 }
