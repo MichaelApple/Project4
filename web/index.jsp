@@ -1,17 +1,22 @@
-<%@ page import="models.enums.WorkKind" %>
-<%@ page import="models.enums.WorkScale" %>
+<%@ page import="model.enums.WorkKind" %>
+<%@ page import="model.enums.WorkScale" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="header.jsp"%>
+<%@include file="WEB-INF/views/header.jsp"%>
 <body>
 
-  <jsp:useBean id="user" class="models.entity.User" scope="application"/>
+  <jsp:useBean id="user" class="model.entities.User" scope="application"/>
   <c:set var="workKindList" value="<%=WorkKind.values()%>" />
   <c:set var="workScaleList" value="<%=WorkScale.values()%>"/>
 
   <div class="container">
       <h1>${requestScope.get("error")}</h1>
-      <h1>${requestScope.get("userExist")}</h1>
-      <h2 align="center"><fmt:message key="index.hello"/>
+      <h2 align="center">
+          <c:choose>
+              <c:when test="${not empty requestScope.userExist}">
+                  <fmt:message key="user.exist"/>
+              </c:when>
+          </c:choose>
+          <fmt:message key="index.hello"/>
           <c:choose>
               <c:when test="${empty sessionScope.user}">
                   <fmt:message key="index.user"/>
@@ -63,7 +68,7 @@
             </c:otherwise>
         </c:choose>
   </div>
-
+  <br><br><br>
 
   </body>
 </html>

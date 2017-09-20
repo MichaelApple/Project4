@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-09-12.21:09:40.042</IntrospectionTimestamp>
-      <IntrospectionStateNumber>587</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-09-20.13:12:33.982</IntrospectionTimestamp>
+      <IntrospectionStateNumber>662</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -36,7 +36,7 @@
     </sequence>
     <table id="10" parent="3" name="users">
       <ObjectId>16406</ObjectId>
-      <StateNumber>587</StateNumber>
+      <StateNumber>662</StateNumber>
     </table>
     <column id="11" parent="10" name="id">
       <Position>1</Position>
@@ -63,11 +63,12 @@
       <NotNull>1</NotNull>
       <StateNumber>558</StateNumber>
     </column>
-    <column id="15" parent="10" name="auth_lvl">
-      <Position>5</Position>
-      <DataType>integer|0</DataType>
+    <column id="15" parent="10" name="role">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>587</StateNumber>
+      <StateNumber>662</StateNumber>
+      <DefaultExpression>&quot;current_user&quot;()</DefaultExpression>
     </column>
     <index id="16" parent="10" name="users_pkey">
       <ObjectId>16410</ObjectId>
