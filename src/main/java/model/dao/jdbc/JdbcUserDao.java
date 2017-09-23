@@ -16,9 +16,9 @@ public class JdbcUserDao implements UserDao {
 
     private Connection connection;
 
-    private static final String REGISTER_NEW_USER = "INSERT INTO users(username, email, password, role) VALUES (?,?,?,?)";
-    private static final String LOGIN_USER = "SELECT * FROM users WHERE email = ?";
-    private static final String CHANGE_EMAIL = "UPDATE users SET email = ? WHERE id = ?";
+    private static final String REGISTER_NEW_USER = "INSERT INTO users(username, email, password, role) VALUES (?,?,?,?);";
+    private static final String LOGIN_USER = "SELECT * FROM users WHERE email = ?;";
+    private static final String CHANGE_EMAIL = "UPDATE users SET email = ? WHERE id = ?;";
 
     JdbcUserDao(Connection sqlConnection) {
         super();
@@ -45,6 +45,7 @@ public class JdbcUserDao implements UserDao {
             ps.setString(3, getHash(user.getPassword()));
             ps.setString(4, user.getRole().toString());
             ps.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

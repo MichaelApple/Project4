@@ -1,16 +1,11 @@
 package model.dao.jdbc;
 
-import model.dao.DaoConnection;
-import model.dao.DaoFactory;
-import model.dao.UserDao;
-import model.dao.old.ConnectionProvider;
+import model.dao.*;
 
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -44,9 +39,21 @@ public class JdbcDaoFactory extends DaoFactory {
     public UserDao getUserDao(DaoConnection connection) {
         JdbcDaoConnection jdbcDaoConnection = (JdbcDaoConnection) connection;
         Connection sqlConnection = jdbcDaoConnection.getConnection();
-
-        Connection myConnection = ConnectionProvider.getConnection();
-
         return new JdbcUserDao(sqlConnection);
     }
+
+    @Override
+    public BrigadeDao getRequestDao(DaoConnection daoConnection) {
+        JdbcDaoConnection jdbcDaoConnection = (JdbcDaoConnection) daoConnection;
+        Connection sqlConnection = jdbcDaoConnection.getConnection();
+        return new JdbcBrigadeDao(sqlConnection);
+    }
+
+    @Override
+    public WorkPlanDao getWorkPlanDao(DaoConnection daoConnection) {
+        JdbcDaoConnection jdbcDaoConnection = (JdbcDaoConnection) daoConnection;
+        Connection sqlConnection = jdbcDaoConnection.getConnection();
+        return new JdbcWorkPlanDao(sqlConnection);
+    }
+
 }

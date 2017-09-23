@@ -65,12 +65,11 @@ $('#myModal').on('shown.bs.modal', function () {
 $(function () {
     $('#datetimepicker8').datetimepicker({
         icons: {
-            time: "fa fa-clock-o",
             date: "fa fa-calendar",
             up: "fa fa-arrow-up",
             down: "fa fa-arrow-down"
         },
-        format: 'DD-MM-YYYY HH:mm'
+        format: 'DD-MM-YYYY'
     });
 });
 

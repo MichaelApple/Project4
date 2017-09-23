@@ -37,17 +37,24 @@
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="index.jsp"><fmt:message key="navbar.project4"/></a>
+    <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp"><fmt:message key="navbar.project4"/></a>
     <li class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.jsp"><fmt:message key="navbar.home"/><span
+                <a class="nav-link" href="${pageContext.request.contextPath}/index.jsp"><fmt:message key="navbar.home"/><span
                         class="sr-only">(current)</span></a>
             </li>
             <c:choose>
-                <c:when test="${not empty sessionScope.user}">
+                <c:when test="${sessionScope.user.role == 'USER'}">
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/personal">Personal cabinet</a>
+                        <a class="nav-link" href="./pages/personal"><fmt:message key="navbar.personal.cabinet"/></a>
+                    </li>
+                </c:when>
+            </c:choose>
+            <c:choose>
+                <c:when test="${sessionScope.user.role == 'ADMIN'}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/admin"><fmt:message key="navbar.admin.cabinet"/></a>
                     </li>
                 </c:when>
             </c:choose>

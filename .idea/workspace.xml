@@ -7,126 +7,114 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c13fbe2a-da31-45d4-af9d-972835c193ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/FrontController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Action.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/AdminPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/ChangeEmail.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Login.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Logout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Personal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Register.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/DaoConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/DaoFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/GenericDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcUserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/entities/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/services/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/controller/commands/RegisterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/views/error.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/views/request.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controllers/ChangeEmailServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controllers/LoginServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controllers/LogoutServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controllers/Register.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controllers/UserRequestServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/dao/ConnectionProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/dao/UserDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/factories/BrigadeAbstractFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/factories/BrigadeFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/factories/BrigadeFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/filters/LogFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/Dispatcher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/Request$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/Request$RequestBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/Request.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/WorkPlan.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/brigades/Brigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/brigades/BuildingBrigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/brigades/CleaningBrigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/entity/brigades/RepairingBrigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/enums/WorkKind.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/models/enums/WorkScale.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/personal.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/request.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/mytaghandler/MyTagHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controllers/ChangeEmailServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controllers/LoginServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controllers/LogoutServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controllers/Register.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/controllers/UserRequestServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dao/ConnectionProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/dao/UserDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/factories/BrigadeAbstractFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/factories/BrigadeFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/factories/BrigadeFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/filters/LogFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/Dispatcher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/Request$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/Request$RequestBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/Request.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/WorkPlan.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/brigades/Brigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/brigades/BuildingBrigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/brigades/CleaningBrigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/entity/brigades/RepairingBrigade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/enums/WorkKind.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/models/enums/WorkScale.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/request.jsp" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/ChangeEmailServlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/old/ChangeEmailServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/old/LoginServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/old/LogoutServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/Register.java" afterPath="$PROJECT_DIR$/src/main/java/controller/old/Register.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/controllers/UserRequestServlet.java" afterPath="$PROJECT_DIR$/src/main/java/controller/old/UserRequestServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/dao/ConnectionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/old/ConnectionProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/old/UserDao.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/factories/BrigadeAbstractFactory.java" afterPath="$PROJECT_DIR$/src/main/java/model/factories/BrigadeAbstractFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/factories/BrigadeFactory.java" afterPath="$PROJECT_DIR$/src/main/java/model/factories/BrigadeFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/filters/LogFilter.java" afterPath="$PROJECT_DIR$/src/main/java/filters/ContentTypeFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/Dispatcher.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Dispatcher.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/Request.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Request.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/WorkPlan.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/WorkPlan.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/brigades/Brigade.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigades/Brigade.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/brigades/BuildingBrigade.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigades/BuildingBrigade.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/brigades/CleaningBrigade.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigades/CleaningBrigade.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/entity/brigades/RepairingBrigade.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigades/RepairingBrigade.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/enums/WorkKind.java" afterPath="$PROJECT_DIR$/src/main/java/model/enums/WorkKind.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/models/enums/WorkScale.java" afterPath="$PROJECT_DIR$/src/main/java/model/enums/WorkScale.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/personal.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/personal.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/UserRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/filters/AuthorizationManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/filters/AuthorizationManagerDefaultImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/BrigadeDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/WorkPlanDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcBrigadeDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcWorkPlanDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigade/Brigade.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigade/factory/BrigadeAbstractFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/model/services/DispatcherRequestService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapping.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/model/services/UserServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/views/admin.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/views/restricted.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/views/result.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/Request$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/views/request.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/controller/old/ChangeEmailServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/controller/old/LoginServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/controller/old/LogoutServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/controller/old/Register.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/controller/old/UserRequestServlet.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/model/dao/old/ConnectionProvider.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/model/dao/old/UserDao.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Dispatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/model/entities/brigades/Brigade.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/model/factories/BrigadeAbstractFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/model/entities/Request$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/views/request.jsp" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/entities/brigades/BuildingBrigade.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigade/BuildingBrigade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/entities/brigades/CleaningBrigade.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigade/CleaningBrigade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/entities/brigades/RepairingBrigade.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigade/RepairingBrigade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/model/factories/BrigadeFactory.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/brigade/factory/BrigadeFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata.keystream" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata.keystream.len" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09/_metadata_/metadata.values.at" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/FrontController.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/FrontController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/commands/Logout.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/commands/Logout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/commands/Personal.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/commands/Personal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/old/UserRequestServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/controller/old/UserRequestServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/filters/AuthorizationFilter.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/filters/AuthorizationFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/dao/DaoFactory.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/dao/DaoFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/dao/jdbc/JdbcDaoFactory.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/dao/jdbc/JdbcDaoFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/dao/jdbc/JdbcUserDao.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/dao/jdbc/JdbcUserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/Request$RequestBuilder.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/Request$RequestBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/Request.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/Request.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/WorkPlan.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/WorkPlan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/Brigade.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/Brigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/BuildingBrigade.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/BuildingBrigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/CleaningBrigade.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/CleaningBrigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/RepairingBrigade.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/entities/brigades/RepairingBrigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/factories/BrigadeAbstractFactory.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/factories/BrigadeAbstractFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/factories/BrigadeFactory$1.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/factories/BrigadeFactory$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/factories/BrigadeFactory.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/factories/BrigadeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/services/UserService.class" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/model/services/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/FrontController.class" afterPath="$PROJECT_DIR$/target/classes/controller/FrontController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/commands/Logout.class" afterPath="$PROJECT_DIR$/target/classes/controller/commands/Logout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/commands/Personal.class" afterPath="$PROJECT_DIR$/target/classes/controller/commands/Personal.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/controller/old/UserRequestServlet.class" afterPath="$PROJECT_DIR$/target/classes/controller/old/UserRequestServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/filters/AuthorizationFilter.class" afterPath="$PROJECT_DIR$/target/classes/filters/AuthorizationFilter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/dao/DaoFactory.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/DaoFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/dao/jdbc/JdbcDaoFactory.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/jdbc/JdbcDaoFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/dao/jdbc/JdbcUserDao.class" afterPath="$PROJECT_DIR$/target/classes/model/dao/jdbc/JdbcUserDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/Request$RequestBuilder.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/Request$RequestBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/Request.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/Request.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/WorkPlan.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/WorkPlan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/brigades/Brigade.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/brigades/Brigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/brigades/BuildingBrigade.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/brigades/BuildingBrigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/brigades/CleaningBrigade.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/brigades/CleaningBrigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/entities/brigades/RepairingBrigade.class" afterPath="$PROJECT_DIR$/target/classes/model/entities/brigades/RepairingBrigade.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/factories/BrigadeAbstractFactory.class" afterPath="$PROJECT_DIR$/target/classes/model/factories/BrigadeAbstractFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/factories/BrigadeFactory$1.class" afterPath="$PROJECT_DIR$/target/classes/model/factories/BrigadeFactory$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/factories/BrigadeFactory.class" afterPath="$PROJECT_DIR$/target/classes/model/factories/BrigadeFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/services/UserService.class" afterPath="$PROJECT_DIR$/target/classes/model/services/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/controller/commands/RegisterTest.class" afterPath="$PROJECT_DIR$/target/test-classes/controller/commands/RegisterTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e31273ad-6248-492a-ab47-09c0db633f09.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project4.iml" afterPath="$PROJECT_DIR$/Project4.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/text.properties" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/text.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/text_ua.properties" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/classes/text_ua.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/views/error.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/views/error.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/views/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/views/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/views/personal.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/views/personal.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/js/jquery.js" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/js/myScripts.js" afterPath="$PROJECT_DIR$/out/artifacts/Project4_war_exploded/js/myScripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/FrontController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/FrontController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/commands/AdminPanel.java" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/AdminPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Logout.java" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Logout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/commands/Personal.java" afterPath="$PROJECT_DIR$/src/main/java/controller/commands/Personal.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/filters/AuthorizationFilter.java" afterPath="$PROJECT_DIR$/src/main/java/filters/AuthorizationFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/dao/DaoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/DaoFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcUserDao.java" afterPath="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcUserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/Request.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Request.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/entities/WorkPlan.java" afterPath="$PROJECT_DIR$/src/main/java/model/entities/WorkPlan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/model/services/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/text.properties" afterPath="$PROJECT_DIR$/src/main/resources/text.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/text_ua.properties" afterPath="$PROJECT_DIR$/src/main/resources/text_ua.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/controller/commands/RegisterTest.java" afterPath="$PROJECT_DIR$/src/test/java/controller/commands/RegisterTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/text.properties" afterPath="$PROJECT_DIR$/target/classes/text.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/text_ua.properties" afterPath="$PROJECT_DIR$/target/classes/text_ua.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/error.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/error.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/views/personal.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/views/personal.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/jquery.js" afterPath="$PROJECT_DIR$/web/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/myScripts.js" afterPath="$PROJECT_DIR$/web/js/myScripts.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -171,7 +159,7 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="users" />
+        <option name="myItemId" value="workplan" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -196,38 +184,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FrontController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/FrontController.java">
+      <file leaf-file-name="DispatcherRequestService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/services/DispatcherRequestService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
-              <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthorizationFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/filters/AuthorizationFilter.java">
+      <file leaf-file-name="personal.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/personal.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/AdminPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -235,8 +207,18 @@
       <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+            <state relative-caret-position="140">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/result.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -251,10 +233,10 @@
         <option value="Filter" />
         <option value="XSLT Stylesheet" />
         <option value="MyTags" />
-        <option value="Interface" />
         <option value="Servlet" />
         <option value="JUnit4 Test Class" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -276,57 +258,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/request.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/Register.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/filters/LogFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/commands/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/DaoConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/GenericDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/entities/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/jdbc/JdbcDaoConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/DaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/jdbc/JdbcDaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/old/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/dao/jdbc/JdbcUserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/Register.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/old/UserRequestServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/FrontController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/entities/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/App.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/rest/index.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/rest/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/commands/HomeAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/DaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/text.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/text_ua.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/web/header.jsp" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/controller/commands/RegisterTest.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/commands/Logout.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/old/ChangeEmailServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/commands/Personal.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/views/personal.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/FrontController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/controller/commands/ChangeEmail.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/commands/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/filters/ContentTypeFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/commands/Register.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcUserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/filters/AuthorizationFilter.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/admin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/commands/Logout.java" />
+        <option value="$PROJECT_DIR$/src/main/java/filters/AuthorizationManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/commands/AdminPanel.java" />
+        <option value="$PROJECT_DIR$/src/test/java/controller/commands/RegisterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/model/services/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/restricted.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/error.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/js/myScripts.js" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/old/UserRequestServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/services/RequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/factories/BrigadeAbstractFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/brigades/BuildingBrigade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/brigades/CleaningBrigade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/brigades/RepairingBrigade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcUserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/brigades/Brigade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/factories/BrigadeFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/filters/AuthorizationManagerDefaultImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/brigade/BuildingBrigade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/Request.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcRequestDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/RequestDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/BrigadeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/commands/Personal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/filters/AuthorizationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/FrontController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/DaoFactory.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/text.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/text_ua.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/brigade/Brigade.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/brigade/factory/BrigadeFactory.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/request.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/model/entities/WorkPlan.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/WorkPlanDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcBrigadeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/services/DispatcherRequestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/commands/UserRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcWorkPlanDao.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/result.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/views/personal.jsp" />
       </list>
     </option>
   </component>
@@ -349,6 +331,20 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Project4" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -421,9 +417,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -543,6 +536,10 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -566,7 +563,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="filters" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,41 +616,27 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -649,7 +658,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="models.dao.jdbc" />
+      <recent name="factories" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="model.services" />
       <recent name="controller.commands" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -657,10 +671,6 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="dao" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Miha\IdeaProjects\Project4\web\WEB-INF\views" />
-      <recent name="C:\Users\Miha\IdeaProjects\Project4\web\WEB-INF\recources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Miha\IdeaProjects\Project4\web" />
@@ -672,9 +682,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="models.dao.jdbc" />
-      <recent name="factories" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Miha\IdeaProjects\Project4\web\WEB-INF\views" />
+      <recent name="C:\Users\Miha\IdeaProjects\Project4\web\WEB-INF\recources" />
     </key>
   </component>
   <component name="RunManager" selected="GlassFish Server.GlassFish 4.1.1.171_0_1">
@@ -701,7 +711,7 @@
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="model.entities.brigades.*" />
+          <option name="PATTERN" value="model.entities.brigade.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -716,6 +726,32 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Project4" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="RegisterTest.execute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="controller.commands.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Project4" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="controller.commands" />
+      <option name="MAIN_CLASS_NAME" value="controller.commands.RegisterTest" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1184,15 +1220,17 @@
         </option>
       </method>
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="GlassFish Server.GlassFish 4.1.1.171_0_1" />
       <item index="1" class="java.lang.String" itemvalue="Application.Password" />
       <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RegisterTest.execute" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Password" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RegisterTest.execute" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Password" />
       </list>
     </recent_temporary>
   </component>
@@ -1234,12 +1272,38 @@
       <workItem from="1505839138631" duration="198000" />
       <workItem from="1505839783127" duration="346000" />
       <workItem from="1505840566732" duration="4408000" />
-      <workItem from="1505893514593" duration="10836000" />
+      <workItem from="1505893514593" duration="20150000" />
+      <workItem from="1505920515753" duration="9876000" />
+      <workItem from="1505977612911" duration="22696000" />
+      <workItem from="1506056793966" duration="19672000" />
+      <workItem from="1506094450454" duration="4244000" />
+      <workItem from="1506168311864" duration="1452000" />
+      <workItem from="1506173771119" duration="10625000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="RegisterTest_execute - 2017.09.20 at 21h 19m 09s.xml">
+      <configuration name="RegisterTest.execute" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterTest_execute - 2017.09.20 at 21h 21m 08s.xml">
+      <configuration name="RegisterTest.execute" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterTest_execute - 2017.09.20 at 21h 23m 38s.xml">
+      <configuration name="RegisterTest.execute" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterTest_execute - 2017.09.20 at 21h 24m 47s.xml">
+      <configuration name="RegisterTest.execute" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterTest_execute - 2017.09.20 at 21h 25m 21s.xml">
+      <configuration name="RegisterTest.execute" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterTest_execute - 2017.09.21 at 10h 30m 38s.xml">
+      <configuration name="RegisterTest.execute" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169137000" />
+    <option name="totallyTimeSpent" value="247016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1256,27 +1320,27 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.391453" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41025642" sideWeight="0.5121029" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263889" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13086233" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17927383" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4017094" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3931624" sideWeight="0.49546143" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32478634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35555556" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52136755" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" x="8" y="292" width="1322" height="193" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32864675" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20574887" sideWeight="0.47619048" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18683812" sideWeight="0.47619048" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19499241" sideWeight="0.52380955" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1314,7 +1378,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="113" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="223" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="GlassfishConfiguration">
@@ -1327,421 +1394,437 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/restricted.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        <state relative-caret-position="455">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/Java/jdk1.8.0_77/jre/lib/rt.jar!/java/sql/DatabaseMetaData.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="372" column="15" lean-forward="false" selection-start-line="372" selection-start-column="15" selection-end-line="372" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/DaoConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/enums/WorkKind.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/old/ConnectionProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/DaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/text_ua.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="371" lean-forward="false" selection-start-line="33" selection-start-column="371" selection-end-line="33" selection-end-column="371" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/text.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/old/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Java/jdk1.8.0_77/jre/lib/rt.jar!/java/util/Optional.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/old/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="38" column="76" lean-forward="true" selection-start-line="38" selection-start-column="76" selection-end-line="38" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/old/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/header.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/personal.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/request.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/request.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar!/org/mockito/Mockito.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="94" column="24" lean-forward="false" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/controller/commands/RegisterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="25" column="68" lean-forward="false" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/old/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="74" column="23" lean-forward="false" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
-          <folding>
-            <marker date="1505473007069" expanded="true" signature="614:673" ph="INSERT INTO users... " />
-            <marker date="1505473007069" expanded="true" signature="1389:1424" ph="SELECT * FRO... users" />
-            <marker date="1505473007069" expanded="true" signature="2422:2461" ph="UPDATE users... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/old/ChangeEmailServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="27" column="41" lean-forward="false" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Java JARs/postgresql-42.1.4.jar!/org/postgresql/core/v3/QueryExecutorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/personal.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Personal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Logout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="48" column="61" lean-forward="false" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="11" lean-forward="false" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/ChangeEmail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/filters/ContentTypeFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="62" lean-forward="false" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-          <folding />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        <state relative-caret-position="102">
+          <caret line="36" column="25" lean-forward="true" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Request.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/brigade/factory/BrigadeAbstractFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/brigade/CleaningBrigade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Java/jdk1.8.0_77/jre/lib/rt.jar!/java/lang/Class.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="445" column="18" lean-forward="false" selection-start-line="445" selection-start-column="18" selection-end-line="445" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/User.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="80" column="18" lean-forward="false" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
-          <folding>
-            <element signature="e#1741#1742#0" expanded="false" />
-            <element signature="e#1772#1773#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/GenericDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/filters/ContentTypeFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="226">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="153">
           <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/services/UserService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/ChangeEmail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/old/ChangeEmailServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/brigade/RepairingBrigade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Logout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/e31273ad-6248-492a-ab47-09c0db633f09.SCHEMA:project4.public">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>e31273ad-6248-492a-ab47-09c0db633f09.SCHEMA:project4.public</OriginalElement>
+          <nodes>
+            <node x="" y="">e31273ad-6248-492a-ab47-09c0db633f09.TABLE:project4.public.requests</node>
+            <node x="" y="">e31273ad-6248-492a-ab47-09c0db633f09.TABLE:project4.public.users</node>
+            <node x="" y="">e31273ad-6248-492a-ab47-09c0db633f09.TABLE:project4.public.brigades</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="206.0" y="165.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Java/jdk1.8.0_77/jre/lib/rt.jar!/java/sql/PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1428">
+          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Personal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/filters/AuthorizationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/GenericDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/Register.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="166">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/DaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="46" lean-forward="false" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/text_ua.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="39" column="129" lean-forward="false" selection-start-line="39" selection-start-column="129" selection-end-line="39" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/text.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/filters/AuthorizationManagerDefaultImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/brigade/Brigade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="88" column="16" lean-forward="false" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="207">
+          <caret line="81" column="34" lean-forward="false" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
           <folding>
-            <marker date="1505904129272" expanded="true" signature="411:478" ph="INSERT INTO users... " />
-            <marker date="1505904129272" expanded="true" signature="527:562" ph="SELECT * FRO... users" />
-            <marker date="1505904129272" expanded="true" signature="613:652" ph="UPDATE users... " />
+            <marker date="1506010705003" expanded="true" signature="411:478" ph="INSERT INTO users... " />
+            <marker date="1506010705003" expanded="true" signature="528:563" ph="SELECT * FRO... users" />
+            <marker date="1506010705003" expanded="true" signature="615:654" ph="UPDATE users... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/brigade/BuildingBrigade.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="52" column="23" lean-forward="true" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcDaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/brigade/factory/BrigadeFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/request.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/old/UserRequestServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="37" column="38" lean-forward="false" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/FrontController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-302">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/BrigadeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/WorkPlanDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/WorkPlan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="method#toString#0;class#WorkPlan#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/entities/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcBrigadeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <marker date="1506177656348" expanded="true" signature="375:455" ph="INSERT INTO requests... " />
+            <marker date="1506177656348" expanded="true" signature="509:575" ph="INSERT INTO brigades... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.requests">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.brigades">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/d5b75798/e31273ad-6248-492a-ab47-09c0db633f09/project4.public.workplan">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/UserRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/dao/jdbc/JdbcWorkPlanDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="96" column="31" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+          <folding>
+            <marker date="1506184546765" expanded="true" signature="444:517" ph="INSERT INTO workplan... " />
+            <marker date="1506184546765" expanded="true" signature="571:651" ph="INSERT INTO requests... " />
+            <marker date="1506184546765" expanded="true" signature="705:771" ph="INSERT INTO brigades... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/result.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/services/DispatcherRequestService.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
-          <caret line="26" column="47" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/filters/AuthorizationFilter.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/views/personal.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="40" column="73" lean-forward="false" selection-start-line="40" selection-start-column="73" selection-end-line="40" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/commands/AdminPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

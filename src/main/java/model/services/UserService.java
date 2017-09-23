@@ -26,9 +26,7 @@ public class UserService {
         try (DaoConnection daoConnection = daoFactory.getConnection()){
             daoConnection.begin();
             UserDao dao = daoFactory.getUserDao(daoConnection);
-            System.out.println(user.getEmail());
             if (dao.getUserByEmail(user.getEmail()).isPresent()) {
-                System.out.println(dao.getUserByEmail(user.getEmail()));
                 return 0;
             }
             dao.create(user);

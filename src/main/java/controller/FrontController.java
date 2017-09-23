@@ -27,26 +27,27 @@ public class FrontController extends HttpServlet {
         actions.put("GET:/logout", new Logout());
         actions.put("POST:/changeEmail", new ChangeEmail());
         actions.put("GET:/personal", new Personal());
+        actions.put("GET:/admin", new AdminPanel());
+        actions.put("POST:/newRequest", new UserRequest());
     }
 
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String method = req.getMethod().toUpperCase();
-        String path = req.getRequestURI();
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String method = request.getMethod().toUpperCase();
+        String path = request.getRequestURI();
 
         path = path.replaceAll(".*Project4_war_exploded/pages", "").replaceAll("/pages", "").replaceAll("\\d+", "");
 
         String actionKey = method + ":" + path;
         Action action = actions.getOrDefault(actionKey, (re, res) -> "/index.jsp");
 
-        String viewPage = action.execute(req, resp);
-        dispatch(req, resp, viewPage);
+        String viewPage = action.execute(request, response);
+        dispatch(request, response, viewPage);
     }
 
     private void dispatch(HttpServletRequest request, HttpServletResponse response, String page) throws  javax.servlet.ServletException, java.io.IOException {
-        if (page.equals("/index.jsp")) request.getRequestDispatcher(page).forward(request, response);
-
         request.getRequestDispatcher(page).forward(request, response);
     }
 

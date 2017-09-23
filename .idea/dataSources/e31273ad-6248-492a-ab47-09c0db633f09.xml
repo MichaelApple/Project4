@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-09-20.13:12:33.982</IntrospectionTimestamp>
-      <IntrospectionStateNumber>662</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-09-23.18:29:27.549</IntrospectionTimestamp>
+      <IntrospectionStateNumber>736</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -29,57 +29,225 @@
     <schema id="8" parent="2" name="information_schema">
       <ObjectId>12113</ObjectId>
     </schema>
-    <sequence id="9" parent="3" name="users_id_seq">
+    <sequence id="9" parent="3" name="requests_id_seq">
+      <ObjectId>24604</ObjectId>
+      <StateNumber>670</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="10" parent="3" name="requests_id_seq1">
+      <ObjectId>24633</ObjectId>
+      <StateNumber>712</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="11" parent="3" name="users_id_seq">
       <ObjectId>16404</ObjectId>
       <StateNumber>557</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
     </sequence>
-    <table id="10" parent="3" name="users">
-      <ObjectId>16406</ObjectId>
-      <StateNumber>662</StateNumber>
+    <sequence id="12" parent="3" name="workplan_id_seq">
+      <ObjectId>24651</ObjectId>
+      <StateNumber>725</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="13" parent="3" name="brigades">
+      <ObjectId>24606</ObjectId>
+      <StateNumber>728</StateNumber>
     </table>
-    <column id="11" parent="10" name="id">
+    <table id="14" parent="3" name="requests">
+      <ObjectId>24635</ObjectId>
+      <StateNumber>727</StateNumber>
+    </table>
+    <table id="15" parent="3" name="users">
+      <ObjectId>16406</ObjectId>
+      <StateNumber>726</StateNumber>
+    </table>
+    <table id="16" parent="3" name="workplan">
+      <ObjectId>24653</ObjectId>
+      <StateNumber>736</StateNumber>
+    </table>
+    <column id="17" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>670</StateNumber>
+      <DefaultExpression>nextval(&apos;requests_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="18" parent="13" name="workercount">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>673</StateNumber>
+    </column>
+    <column id="19" parent="13" name="name">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>678</StateNumber>
+    </column>
+    <column id="20" parent="13" name="request_id">
+      <Position>8</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>696</StateNumber>
+    </column>
+    <index id="21" parent="13" name="requests_pkey">
+      <ObjectId>24610</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="13" name="requests_pkey">
+      <ObjectId>24611</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>requests_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="23" parent="13" name="brigades_requests_id_fk">
+      <ObjectId>24641</ObjectId>
+      <ColNames>request_id</ColNames>
+      <RefTableName>requests</RefTableName>
+      <RefKeyName>requests_pkey1</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="24" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>712</StateNumber>
+      <DefaultExpression>nextval(&apos;requests_id_seq1&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="25" parent="14" name="user_id">
+      <Position>2</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>712</StateNumber>
+    </column>
+    <column id="26" parent="14" name="workkind">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>713</StateNumber>
+    </column>
+    <column id="27" parent="14" name="workscale">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <StateNumber>714</StateNumber>
+    </column>
+    <column id="28" parent="14" name="desiredtime">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>715</StateNumber>
+    </column>
+    <index id="29" parent="14" name="requests_pkey1">
+      <ObjectId>24639</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="14" name="requests_pkey1">
+      <ObjectId>24640</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>requests_pkey1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="31" parent="14" name="requests_users_id_fk">
+      <ObjectId>24646</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefKeyName>users_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="32" parent="15" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>557</StateNumber>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="12" parent="10" name="username">
+    <column id="33" parent="15" name="username">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>557</StateNumber>
     </column>
-    <column id="13" parent="10" name="email">
+    <column id="34" parent="15" name="email">
       <Position>3</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>557</StateNumber>
     </column>
-    <column id="14" parent="10" name="password">
+    <column id="35" parent="15" name="password">
       <Position>4</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>558</StateNumber>
     </column>
-    <column id="15" parent="10" name="role">
+    <column id="36" parent="15" name="role">
       <Position>6</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>662</StateNumber>
       <DefaultExpression>&quot;current_user&quot;()</DefaultExpression>
     </column>
-    <index id="16" parent="10" name="users_pkey">
+    <index id="37" parent="15" name="users_pkey">
       <ObjectId>16410</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="17" parent="10" name="users_pkey">
+    <key id="38" parent="15" name="users_pkey">
       <ObjectId>16411</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
+    <column id="39" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>725</StateNumber>
+      <DefaultExpression>nextval(&apos;workplan_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="40" parent="16" name="request_id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>725</StateNumber>
+    </column>
+    <column id="41" parent="16" name="brigade_id">
+      <Position>4</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>725</StateNumber>
+    </column>
+    <column id="42" parent="16" name="desireddate">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>736</StateNumber>
+    </column>
+    <index id="43" parent="16" name="workplan_pkey">
+      <ObjectId>24657</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="16" name="workplan_pkey">
+      <ObjectId>24658</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>workplan_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="45" parent="16" name="workplan_requests_id_fk">
+      <ObjectId>24664</ObjectId>
+      <ColNames>request_id</ColNames>
+      <RefTableName>requests</RefTableName>
+      <RefKeyName>requests_pkey1</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="46" parent="16" name="workplan_brigades_id_fk">
+      <ObjectId>24669</ObjectId>
+      <ColNames>brigade_id</ColNames>
+      <RefTableName>brigades</RefTableName>
+      <RefKeyName>requests_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

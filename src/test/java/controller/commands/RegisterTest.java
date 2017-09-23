@@ -1,5 +1,6 @@
 package controller.commands;
 
+import static org.junit.Assert.*;
 
 import model.entities.User;
 import model.services.UserService;
@@ -21,13 +22,20 @@ public class RegisterTest {
     @Test
     public void execute() throws Exception {
         HttpServletRequest request = mock(HttpServletRequest.class);
-        UserService userService = mock(UserService.class);
+
         User user = new User.Builder().build();
-        Register register = (Register) mockingDetails(Register.class);
 
+        Register register = new Register();
 
-        verify(userService, times(1)).register(user);
-        verify(request, times(1)).setAttribute("user", user);
+        String url = register.execute(request, null);
+
+//        verify(request, times(1)).getParameter("name");
+//        verify(request, times(1)).getParameter("email");
+//        verify(request, times(1)).getParameter("password");
+//        verify(userService, times(1)).register(user);
+//        verify(request, times(1)).setAttribute("user", user);
+
+        assertEquals("personal.jsp", url);
     }
 
 }

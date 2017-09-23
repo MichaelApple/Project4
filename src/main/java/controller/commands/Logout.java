@@ -24,6 +24,7 @@ public class Logout implements Action {
         if (session.getAttribute("user") != null)
             logger.info("User " + session.getAttribute("user").toString() + " is logged out");
         session.invalidate();
+
         request.setAttribute("logout", "Logged out");
         return "/index.jsp";
     }

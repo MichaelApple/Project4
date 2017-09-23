@@ -12,6 +12,8 @@ public abstract class DaoFactory {
     public abstract DaoConnection getConnection();
 //    public abstract UserDao getUserDao();
     public abstract UserDao getUserDao(DaoConnection connection);
+    public abstract BrigadeDao getRequestDao(DaoConnection connection);
+    public abstract WorkPlanDao getWorkPlanDao(DaoConnection connection);
 
 
     private static DaoFactory instance;

@@ -12,13 +12,21 @@ import java.io.IOException;
  * Created by Miha on 20.09.2017.
  */
 public class Personal implements Action {
+
     private static final Logger logger = Logger.getLogger(Login.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String pageToGo;
         HttpSession session = request.getSession();
-        if (session.getAttribute("user") != null)
+
+        if (session.getAttribute("user") != null) {
             logger.info("User " + session.getAttribute("user").toString() + " entered personal cabinet");
-        return "/WEB-INF/views/personal.jsp";
+            pageToGo = "/WEB-INF/views/personal.jsp";
+
+        } else {
+            pageToGo = "/WEB-INF/views/error.jsp";
+        }
+        return pageToGo;
     }
 }

@@ -10,6 +10,7 @@
 
   <div class="container">
       <h1>${requestScope.get("error")}</h1>
+      <h1>${requestScope.get("notAdmin")}</h1>
       <h2 align="center">
           <c:choose>
               <c:when test="${not empty requestScope.userExist}">
@@ -34,7 +35,7 @@
                 <h3><fmt:message key="request.loginfirst"/></h3>
             </c:when>
             <c:otherwise>
-              <form action="NewRequest" method="post">
+              <form action="./pages/newRequest" method="post">
                   <div class="form-group">
                       <label for="workKind"><fmt:message key="request.label.workkind"/></label>
                       <select class="form-control" id="workKind" name="workKind">
