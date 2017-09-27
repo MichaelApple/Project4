@@ -25,36 +25,32 @@ public class AuthorizationFilter implements Filter {
     private final static Logger logger = Logger.getLogger(AuthorizationFilter.class);
     private String errorPage;
 
-    public void destroy() {
-    }
-
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, java.io.IOException {
 
         logger.info("User Authorization process starting");
 
         HttpSession session = ((HttpServletRequest)request).getSession(false);
-        if (session.getAttribute("user") == null) {
-            chain.doFilter(request,response);
-        } else {
-            User currentUser = (User)session.getAttribute("user");
+        User currentUser = (User)session.getAttribute("user");
 
-            if (currentUser == null) {
-                chain.doFilter(request, response);
-            }
-            else {
-                String URI = ((HttpServletRequest)request).getRequestURI();
-                AuthorizationManager authMgr = new AuthorizationManagerDefaultImpl();
-
-                boolean authorized = authMgr.isUserAuthorized(currentUser, URI);
-                if (authorized) {
-                    chain.doFilter(request,response);
-                }
-                else {
-                    returnError(request,response,"User is not authorized to access this area!");
-                }
-            }
+        if (currentUser == null) {
+            chain.doFilter(request, response);
         }
+        else {
+            isAuthorized(request, response, chain, currentUser);
+        }
+    }
 
+    private void isAuthorized(ServletRequest request, ServletResponse response, FilterChain chain, User currentUser) throws IOException, ServletException {
+        String URI = ((HttpServletRequest)request).getRequestURI();
+        AuthorizationManager authMgr = new AuthorizationManagerDefaultImpl();
+
+        boolean authorized = authMgr.isUserAuthorized(currentUser, URI);
+        if (authorized) {
+            chain.doFilter(request,response);
+        }
+        else {
+            returnError(request,response,"User is not authorized to access this area!");
+        }
     }
 
     public void init(FilterConfig filterConfig) throws javax.servlet.ServletException {
@@ -66,5 +62,8 @@ public class AuthorizationFilter implements Filter {
                    request.setAttribute("error", errorString);
                    request.getRequestDispatcher(errorPage).forward(request,response);
       }
+
+    public void destroy() {
+    }
 
 }

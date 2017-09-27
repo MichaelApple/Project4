@@ -25,7 +25,7 @@ public class RegisterTest {
 
         User user = new User.Builder().build();
 
-        Register register = new Register();
+        Register register = mock(Register.class);
 
         String url = register.execute(request, null);
 

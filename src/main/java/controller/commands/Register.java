@@ -1,6 +1,9 @@
 package controller.commands;
 
+import controller.regex.RegExpressions;
+import model.entities.UserRequest;
 import model.entities.User;
+import model.entities.brigade.Brigade;
 import model.services.UserService;
 import org.apache.log4j.Logger;
 
@@ -9,6 +12,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * Created by Miha on 15.09.2017.
@@ -30,24 +34,30 @@ public class Register implements Action {
         String name = request.getParameter(PARAM_NAME);
         String email = request.getParameter(PARAM_EMAIL);
         String password = request.getParameter(PARAM_PASSWORD);
-        User user = null;
 
-        int status;
-        if (name != null && email != null && password != null) {
-            user = new User.Builder()
-                    .setUserName(name)
-                    .setEmail(email)
-                    .setPassword(password)
-                    .setRole(User.Role.USER)
-                    .build();
-            status = userService.register(user);
+        User user;
+        boolean status;
 
-        } else status = 0;
-        if (status == 1) {
+        if (!RegExpressions.checkData(request) && name == null && email == null && password == null) {
+            logger.info("Error occurred");
+            return  "/index.jsp";
+        }
+
+        user = new User.Builder()
+                .setUserName(name)
+                .setEmail(email)
+                .setPassword(password)
+                .setRole(User.Role.USER)
+                .build();
+        status = userService.register(user);
+
+        if (status) {
             request.getSession().setAttribute("user", user);
             Cookie userName = new Cookie("user", email);
             response.addCookie(userName);
             request.setAttribute("user", user);
+            Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) request.getSession().getAttribute("user"), 1, 1);
+            request.setAttribute("userWorkPlan", userWorkPlan);
             pageToGo = "/WEB-INF/views/personal.jsp";
 
             logger.info("User " + user.getUserName() + " is registered");

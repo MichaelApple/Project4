@@ -1,7 +1,7 @@
 package model.dao.jdbc;
 
 import model.dao.BrigadeDao;
-import model.entities.Request;
+import model.entities.UserRequest;
 import model.entities.brigade.Brigade;
 
 import java.sql.*;
@@ -48,17 +48,17 @@ public class JdbcBrigadeDao implements BrigadeDao {
     }
 
     @Override
-    public int createRequest(Request request) {
+    public int createRequest(UserRequest userRequest) {
 //        try (PreparedStatement ps = connection.prepareStatement(CREATE_REQUEST, Statement.RETURN_GENERATED_KEYS)) {
-//            ps.setInt(1, request.getUserId());
-//            ps.setString(2, request.getWorkKind().toString());
-//            ps.setString(3, request.getWorkScale().toString());
-//            ps.setString(4, request.getDesiredDateTime().toString());
+//            ps.setInt(1, userRequest.getUserId());
+//            ps.setString(2, userRequest.getWorkKind().toString());
+//            ps.setString(3, userRequest.getWorkScale().toString());
+//            ps.setString(4, userRequest.getDesiredDateTime().toString());
 //            int id = ps.executeUpdate();
 //
 //            try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
 //                if (generatedKeys.next()) {
-//                    request.setId(generatedKeys.getInt(1));
+//                    userRequest.setId(generatedKeys.getInt(1));
 //                }
 //                else {
 //                    throw new SQLException("Creating user failed, no ID obtained.");
@@ -67,6 +67,6 @@ public class JdbcBrigadeDao implements BrigadeDao {
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-        return  request.getId();
+        return  userRequest.getId();
     }
 }

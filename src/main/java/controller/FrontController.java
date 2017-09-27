@@ -2,7 +2,6 @@ package controller;
 
 import controller.commands.*;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +27,7 @@ public class FrontController extends HttpServlet {
         actions.put("POST:/changeEmail", new ChangeEmail());
         actions.put("GET:/personal", new Personal());
         actions.put("GET:/admin", new AdminPanel());
-        actions.put("POST:/newRequest", new UserRequest());
+        actions.put("POST:/newRequest", new NewRequest());
     }
 
 

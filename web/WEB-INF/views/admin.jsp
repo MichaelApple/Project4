@@ -35,7 +35,7 @@
         <div class="col-sm-8">
             <div class="container myContainer">
                 <h1><fmt:message key="personal.change.email"/></h1>
-                <form action="./pages/changeEmail" method="post">
+                <form action="${pageContext.request.contextPath}/pages/changeEmail" method="post">
                     <div class="form-group">
                         <label for="newEmail"><fmt:message key="personal.change.newemail"/></label>
                         <input type="email" class="form-control" name="newEmail" id="newEmail">
@@ -48,6 +48,21 @@
         </div>
     </div>
 </div>
-
+<c:forEach var="workPlan" items="${requestScope.userWorkPlan}">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container myContainer">
+                    <h4>Your userRequest: <c:out value="${workPlan.key}"/></h4>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="container myContainer">
+                    <p>${workPlan.value}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</c:forEach>
 </body>
 </html>

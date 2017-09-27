@@ -29,15 +29,15 @@
       </h2>
   </div>
   <div class="container myContainer" style="width: 50%">
-      <h1 align="center"><fmt:message key="request.head"/></h1>
+      <h1 align="center"><fmt:message key="userRequest.head"/></h1>
         <c:choose>
             <c:when test="${empty sessionScope.user}">
-                <h3><fmt:message key="request.loginfirst"/></h3>
+                <h3><fmt:message key="userRequest.loginfirst"/></h3>
             </c:when>
             <c:otherwise>
-              <form action="./pages/newRequest" method="post">
+              <form action="${pageContext.request.contextPath}/pages/newRequest" method="post">
                   <div class="form-group">
-                      <label for="workKind"><fmt:message key="request.label.workkind"/></label>
+                      <label for="workKind"><fmt:message key="userRequest.label.workkind"/></label>
                       <select class="form-control" id="workKind" name="workKind">
                           <c:forEach items="${workKindList}" var="workKind">
                               <option>${workKind.toString()}</option>
@@ -45,7 +45,7 @@
                       </select>
                   </div>
                   <div class="form-group">
-                      <label for="workScale"><fmt:message key="request.label.workscal"/></label>
+                      <label for="workScale"><fmt:message key="userRequest.label.workscal"/></label>
                       <select class="form-control" id="workScale" name="workScale">
                           <c:forEach items="${workScaleList}" var="workScale">
                               <option>${workScale.toString()}</option>
@@ -53,7 +53,7 @@
                       </select>
                   </div>
                   <div class="form-group">
-                      <label for="desiredDateTime"><fmt:message key="request.label.desiredtime"/></label>
+                      <label for="desiredDateTime"><fmt:message key="userRequest.label.desiredtime"/></label>
                       <div class='input-group date' id='datetimepicker8'>
                           <input type='text' class="form-control" id="desiredDateTime" name="desiredDateTime"/>
                           <span class="input-group-addon">
@@ -63,7 +63,7 @@
                       </div>
                   </div>
                   <div class="form-group">
-                      <input type="submit" class="btn btn-primary" value="<fmt:message key="request.send"/>">
+                      <input type="submit" class="btn btn-primary" value="<fmt:message key="userRequest.send"/>">
                   </div>
               </form>
             </c:otherwise>

@@ -1,13 +1,18 @@
 package model.dao.jdbc;
 
 import model.dao.UserDao;
+import model.entities.UserRequest;
 import model.entities.User;
+import model.entities.brigade.Brigade;
+import model.entities.brigade.factory.BrigadeFactory;
+import model.enums.WorkKind;
+import model.enums.WorkScale;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.*;
-import java.util.List;
-import java.util.Optional;
+import java.time.LocalDate;
+import java.util.*;
 
 /**
  * Created by Miha on 15.09.2017.
@@ -19,6 +24,9 @@ public class JdbcUserDao implements UserDao {
     private static final String REGISTER_NEW_USER = "INSERT INTO users(username, email, password, role) VALUES (?,?,?,?);";
     private static final String LOGIN_USER = "SELECT * FROM users WHERE email = ?;";
     private static final String CHANGE_EMAIL = "UPDATE users SET email = ? WHERE id = ?;";
+    private static final String FIND_ALL_USER_REQUESTS_BRIGADES = "SELECT * FROM brigades\n" +
+            "  INNER JOIN requests r ON brigades.request_id = r.id\n" +
+            "  WHERE user_id = ? GROUP BY brigades.id, r.id LIMIT %d OFFSET %d;";
 
     JdbcUserDao(Connection sqlConnection) {
         super();
@@ -95,6 +103,30 @@ public class JdbcUserDao implements UserDao {
             e.printStackTrace();
         }
     }
+
+    public Map<UserRequest, Brigade> getUserWorkPlan(int id, int limit, int offset) {
+        Map<UserRequest, Brigade> userWorkPlan = new HashMap<>();
+        try (PreparedStatement ps = connection.prepareStatement(String.format(FIND_ALL_USER_REQUESTS_BRIGADES, limit, offset))){
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                UserRequest userRequest = new UserRequest.RequestBuilder()
+                        .setId(rs.getInt("id"))
+                        .setUserId(id)
+                        .setWorkKind(WorkKind.valueOf(rs.getString("workkind").toUpperCase()))
+                        .setWorkScale(WorkScale.valueOf(rs.getString("workscale").toUpperCase()))
+                        .setDesiredDateTime(LocalDate.parse(rs.getString("desiredtime")))
+                        .build();
+                userWorkPlan.put(userRequest, new BrigadeFactory().createBrigade(userRequest));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return userWorkPlan;
+    }
+
 
     private static String getHash(String password) {
         String result = null;

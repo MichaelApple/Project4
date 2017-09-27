@@ -1,5 +1,6 @@
 package controller.commands;
 
+import controller.regex.RegExpressions;
 import model.entities.User;
 import model.services.UserService;
 import org.apache.log4j.Logger;
@@ -25,26 +26,28 @@ public class ChangeEmail implements Action {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String pageToGo = "";
+        String pageToGo;
         String email = request.getParameter(PARAM_EMAIL);
 
-        if (email != null) {
-            HttpSession session = request.getSession();
-            User user = (User) session.getAttribute("user");
+        if (!RegExpressions.checkData(request) && email == null)
+            return "/index.jsp";
 
-            Optional<User> optionalUser = userService.changeEmail(user, email);
-            if (optionalUser.isPresent()) {
-                user = optionalUser.get();
-                session.setAttribute("user", user);
-                request.setAttribute("user", user);
-                pageToGo = "/WEB-INF/views/personal.jsp";
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
 
-                logger.info("User " + user.getUserName() + " changed his email to " + user.getEmail());
-            } else {
-                request.setAttribute("error", "Email or password did not match");
-                pageToGo = "/WEB-INF/views/personal.jsp";
-                logger.error("Errors occurred with User " + user.getUserName() + ": ");
-            }
+        Optional<User> optionalUser = userService.changeEmail(user, email);
+
+        if (optionalUser.isPresent()) {
+            user = optionalUser.get();
+            session.setAttribute("user", user);
+            request.setAttribute("user", user);
+            pageToGo = "/WEB-INF/views/personal.jsp";
+
+            logger.info("User " + user.getUserName() + " changed his email to " + user.getEmail());
+        } else {
+            request.setAttribute("error", "Email or password did not match");
+            pageToGo = "/WEB-INF/views/personal.jsp";
+            logger.error("Errors occurred with User " + user.getUserName() + ": ");
         }
 
         return pageToGo;

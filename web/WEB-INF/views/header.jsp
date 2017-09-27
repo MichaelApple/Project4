@@ -1,6 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib uri="/WEB-INF/mytags.tld" prefix="m" %>
 <c:set var="language"
        value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}"
        scope="session"/>
@@ -47,23 +48,26 @@
             <c:choose>
                 <c:when test="${sessionScope.user.role == 'USER'}">
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/personal"><fmt:message key="navbar.personal.cabinet"/></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/pages/personal"><fmt:message key="navbar.personal.cabinet"/></a>
                     </li>
                 </c:when>
             </c:choose>
             <c:choose>
                 <c:when test="${sessionScope.user.role == 'ADMIN'}">
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/admin"><fmt:message key="navbar.admin.cabinet"/></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/pages/admin"><fmt:message key="navbar.admin.cabinet"/></a>
                     </li>
                 </c:when>
             </c:choose>
         </ul>
         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link"><m:userName userName="${user.userName}"/></a>
+            </li>
             <c:choose>
                 <c:when test="${not empty sessionScope.user}">
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/logout"><fmt:message key="navbar.login.logout"/></a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/pages/logout"><fmt:message key="navbar.login.logout"/></a>
                     </li>
                 </c:when>
                 <c:otherwise>
@@ -74,7 +78,7 @@
                             <li>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form class="form" role="form" method="post" action="./pages/login"
+                                        <form class="form" role="form" method="post" action="${pageContext.request.contextPath}/pages/login"
                                               accept-charset="UTF-8" id="login-nav1">
                                             <div class="form-group">
                                                 <label class="sr-only" for="exampleInputEmail2"><fmt:message
@@ -100,14 +104,14 @@
                                         </form>
                                     </div>
                                     <div class="bottom text-center">
-                                        <a class="nav-link" href="./pages/logout"><fmt:message key="navbar.login.logout"/></a>
+                                        <a class="nav-link" href="${pageContext.request.contextPath}/pages/logout"><fmt:message key="navbar.login.logout"/></a>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#largeShoes" href="#"><fmt:message key="navbar.register"/></a>
+                        <a class="nav-link" data-toggle="modal" data-target="#register" href="#"><fmt:message key="navbar.register"/></a>
                     </li>
                 </c:otherwise>
             </c:choose>
@@ -126,7 +130,7 @@
 
 
 <!-- The modal Registration Form-->
-<div class="modal fade" id="largeShoes" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
      aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -139,7 +143,7 @@
             </div>
 
             <div class="modal-body">
-                <form class="form-horizontal" method="POST" action="./pages/register">
+                <form class="form-horizontal" method="POST" action="${pageContext.request.contextPath}/pages/register">
                     <div class="row">
                         <div class="col-md-3"></div>
                         <div class="col-md-6">

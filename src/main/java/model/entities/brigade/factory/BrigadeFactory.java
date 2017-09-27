@@ -1,6 +1,6 @@
 package model.entities.brigade.factory;
 
-import model.entities.Request;
+import model.entities.UserRequest;
 import model.entities.brigade.Brigade;
 import model.entities.brigade.BuildingBrigade;
 import model.entities.brigade.CleaningBrigade;
@@ -12,10 +12,10 @@ import model.entities.brigade.RepairingBrigade;
 public class BrigadeFactory implements BrigadeAbstractFactory{
 
     @Override
-    public Brigade createBrigade(Request request) {
+    public Brigade createBrigade(UserRequest userRequest) {
         Brigade brigade;
 
-        switch (request.getWorkKind()) {
+        switch (userRequest.getWorkKind()) {
             case BUILDING: {
                 brigade = new BuildingBrigade();
                 break;
@@ -30,7 +30,7 @@ public class BrigadeFactory implements BrigadeAbstractFactory{
             }
             default: return null;
         }
-        switch (request.getWorkScale()) {
+        switch (userRequest.getWorkScale()) {
             case EASY: {
                 brigade.setWorkerCount(1);
                 break;
@@ -44,7 +44,7 @@ public class BrigadeFactory implements BrigadeAbstractFactory{
                 break;
             }
         }
-        brigade.setRequestId(request.getId());
+        brigade.setRequestId(userRequest.getId());
         brigade.setName(brigade.getClass().getSimpleName());
         return brigade;
     }

@@ -3,8 +3,11 @@ package model.services;
 import model.dao.DaoConnection;
 import model.dao.DaoFactory;
 import model.dao.UserDao;
+import model.entities.UserRequest;
 import model.entities.User;
+import model.entities.brigade.Brigade;
 
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -22,18 +25,18 @@ public class UserService {
         return Holder.INSTANCE;
     }
 
-    public int register(User user) {
+    public boolean register(User user) {
         try (DaoConnection daoConnection = daoFactory.getConnection()){
             daoConnection.begin();
             UserDao dao = daoFactory.getUserDao(daoConnection);
             if (dao.getUserByEmail(user.getEmail()).isPresent()) {
-                return 0;
+                return false;
             }
             dao.create(user);
             daoConnection.commit();
-            return 1;
+            return true;
         } catch (Exception e) {
-            return 0;
+            return false;
         }
     }
 
@@ -53,7 +56,7 @@ public class UserService {
     public Optional<User> changeEmail(User user, String newEmail) {
         try (DaoConnection daoConnection = daoFactory.getConnection()){
 
-            UserDao userDao ;
+            UserDao userDao;
             try {
                 daoConnection.begin();
                 userDao = daoFactory.getUserDao(daoConnection);
@@ -66,5 +69,16 @@ public class UserService {
             }
             return userDao.getUserByEmail(newEmail);
         }
+    }
+
+    public Map<UserRequest, Brigade> showUserWorkPlan(User user, int limit, int offset) {
+        Map<UserRequest, Brigade> userWorkPlan;
+        try (DaoConnection daoConnection = daoFactory.getConnection()){
+            daoConnection.begin();
+            UserDao userDao = daoFactory.getUserDao(daoConnection);
+            userWorkPlan = userDao.getUserWorkPlan(user.getId(), limit, offset);
+            daoConnection.commit();
+        }
+        return userWorkPlan;
     }
 }

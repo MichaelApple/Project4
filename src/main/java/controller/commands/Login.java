@@ -1,6 +1,9 @@
 package controller.commands;
 
+import controller.regex.RegExpressions;
+import model.entities.UserRequest;
 import model.entities.User;
+import model.entities.brigade.Brigade;
 import model.services.UserService;
 import org.apache.log4j.Logger;
 
@@ -10,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -30,25 +34,29 @@ public class Login implements Action {
         String email = request.getParameter(PARAM_EMAIL);
         String password = request.getParameter(PARAM_PASSWORD);
 
-        if (email != null && password != null) {
-            Optional<User> optionalUser = userService.login(email, password);
-            if (optionalUser.isPresent()) {
-                User user = optionalUser.get();
+        if (!RegExpressions.checkData(request) && email == null && password == null)
+            return "/index.jsp";
 
-                HttpSession session = request.getSession();
-                session.setAttribute("user", user);
-                Cookie userName = new Cookie("user", email);
-                response.addCookie(userName);
-                request.setAttribute("user", user);
-                pageToGo = "/WEB-INF/views/personal.jsp";
+        Optional<User> optionalUser = userService.login(email, password);
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
 
-                logger.info("User " + user.getUserName() + " is logged in");
-            } else {
-                request.setAttribute("error", "Email or password did not match");
-                pageToGo = "/index.jsp";
-                logger.error("Email or password did not match");
-            }
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+            Cookie userName = new Cookie("user", email);
+            response.addCookie(userName);
+            Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) session.getAttribute("user"), 1, 1);
+            request.setAttribute("userWorkPlan", userWorkPlan);
+            request.setAttribute("user", user);
+            pageToGo = "/WEB-INF/views/personal.jsp";
+
+            logger.info("User " + user.getUserName() + " is logged in");
+        } else {
+            request.setAttribute("error", "Email or password did not match");
+            pageToGo = "/index.jsp";
+            logger.error("Email or password did not match");
         }
+
 
         return pageToGo;
     }

@@ -8,10 +8,40 @@
     <tlib-version>1.0</tlib-version>
     <jsp-version>1.2</jsp-version>
     <short-name>simple</short-name>
-    <uri>http://tomcat.apache.org/example-taglib</uri>
 
     <tag>
-        <name>today</name>
+        <name>userName</name>
         <tag-class>mytaghandler.MyTagHandler</tag-class>
+        <attribute>
+            <name>userName</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
     </tag>
+
+
+    <tag>
+        <name>nav</name>
+        <tag-class>mytaghandler.Paginator</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>action</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>totalPageCount</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>int</type>
+        </attribute>
+        <attribute>
+            <name>viewPageCount</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>int</type>
+        </attribute>
+    </tag>
+
 </taglib>

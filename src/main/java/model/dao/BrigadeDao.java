@@ -1,6 +1,6 @@
 package model.dao;
 
-import model.entities.Request;
+import model.entities.UserRequest;
 import model.entities.brigade.Brigade;
 
 /**
@@ -8,5 +8,5 @@ import model.entities.brigade.Brigade;
  */
 public interface BrigadeDao extends GenericDao<Brigade>{
 
-    int createRequest(Request request);
+    int createRequest(UserRequest userRequest);
 }

@@ -1,8 +1,7 @@
 package model.dao.jdbc;
 
-import model.dao.DaoConnection;
 import model.dao.WorkPlanDao;
-import model.entities.Request;
+import model.entities.UserRequest;
 import model.entities.WorkPlan;
 import model.entities.brigade.Brigade;
 
@@ -32,6 +31,7 @@ public class JdbcWorkPlanDao implements WorkPlanDao {
 
     @Override
     public List<WorkPlan> findAll() {
+
         return null;
     }
 
@@ -59,24 +59,24 @@ public class JdbcWorkPlanDao implements WorkPlanDao {
     }
 
     @Override
-    public int createRequest(Request request) {
+    public int createRequest(UserRequest userRequest) {
         try (PreparedStatement ps = connection.prepareStatement(CREATE_REQUEST, Statement.RETURN_GENERATED_KEYS)) {
-            ps.setInt(1, request.getUserId());
-            ps.setString(2, request.getWorkKind().toString());
-            ps.setString(3, request.getWorkScale().toString());
-            ps.setString(4, request.getDesiredDateTime().toString());
+            ps.setInt(1, userRequest.getUserId());
+            ps.setString(2, userRequest.getWorkKind().toString());
+            ps.setString(3, userRequest.getWorkScale().toString());
+            ps.setString(4, userRequest.getDesiredDateTime().toString());
             int id = ps.executeUpdate();
 
             try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    request.setId(generatedKeys.getInt(1));
+                    userRequest.setId(generatedKeys.getInt(1));
                 }
                 else throw new SQLException("Creating user failed, no ID obtained.");
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return  request.getId();
+        return  userRequest.getId();
     }
 
     @Override
@@ -96,4 +96,6 @@ public class JdbcWorkPlanDao implements WorkPlanDao {
         }
         return brigade.getId();
     }
+
+
 }
