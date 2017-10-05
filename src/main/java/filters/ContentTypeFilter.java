@@ -1,6 +1,5 @@
 package filters;
 
-import org.apache.log4j.Logger;
 
 import javax.servlet.annotation.WebFilter;
 

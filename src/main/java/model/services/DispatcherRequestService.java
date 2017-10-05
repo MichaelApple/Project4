@@ -11,7 +11,11 @@ import model.entities.brigade.factory.BrigadeFactory;
 import java.util.Optional;
 
 /**
+ * Manages UserRequest creates brigade based on request and
+ * write to database in one transaction request, brigade and workPlan records
+ *
  * Created by Miha on 21.09.2017.
+ * @author Miha
  */
 public class DispatcherRequestService {
 
@@ -24,6 +28,13 @@ public class DispatcherRequestService {
         return DispatcherRequestService.Holder.INSTANCE;
     }
 
+    /**
+     * in one transaction writes to database userRequest, brigade and workPlan
+     * based on userRequest
+     *
+     * @param userRequest UserRequest
+     * @return result of writing workPlan to database
+     */
     public Optional<WorkPlan> addToWorkPlan(UserRequest userRequest) {
 
         WorkPlan workPlan = null;
@@ -49,7 +60,6 @@ public class DispatcherRequestService {
             }
             daoConnection.commit();
         }
-
         return workPlan != null ? Optional.of(workPlan) : Optional.empty();
     }
 

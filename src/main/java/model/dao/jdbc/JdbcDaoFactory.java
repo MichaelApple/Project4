@@ -21,7 +21,7 @@ public class JdbcDaoFactory extends DaoFactory {
             ic = new InitialContext();
             ds = (DataSource) ic.lookup("jdbc/Project4");
         } catch (NamingException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 

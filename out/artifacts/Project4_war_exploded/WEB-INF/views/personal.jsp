@@ -46,29 +46,42 @@
             </div>
         </div>
     </div>
-
+    <div class="container">
+        <c:choose>
+            <c:when test="${empty requestScope.offset}">
+                <c:set var="offset" value="0"/>
+            </c:when>
+            <c:otherwise>
+                <c:set var="offset" value="${requestScope.offset}"/>
+            </c:otherwise>
+        </c:choose>
+        <form class="pagination" action="${pageContext.request.contextPath}/pages/personal" method="post">
+            <input type="hidden" name="offset" value="${offset}">
+            <input type="hidden" name="rowcount" value="${rowcount}">
+            <input type="submit" name="submit" value="previous">
+            <input type="submit" name="submit" value="next">
+        </form>
     <c:forEach var="workPlan" items="${requestScope.userWorkPlan}">
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
                 <div class="container myContainer">
-                    <h4>Your Request: <c:out value="${workPlan.key}"/></h4>
+                    <h4>Your Request: <c:out value="${workPlan.key.id}"/></h4>
+                    <p>Request workKind: ${workPlan.key.workKind}</p>
+                    <p>Request workScale: ${workPlan.key.workScale}</p>
+                    <p>Request Desired Date: ${workPlan.key.desiredDateTime}</p>
                 </div>
             </div>
             <div class="col-sm-8">
                 <div class="container myContainer">
-                    <p>${workPlan.value}</p>
+                    <p>Brigade destination: ${workPlan.value.name}</p>
+                    <p>Number of workers: ${workPlan.value.workerCount}</p>
                 </div>
             </div>
         </div>
     </div>
     </c:forEach>
+</div>
 
-    <form action="${pageContext.request.contextPath}/pages/personal" method="post">
-        <input type="hidden" name="firstrow" value="${firstrow}">
-        <input type="hidden" name="rowcount" value="${rowcount}">
-        <input type="submit" name="page" value="next">
-        <input type="submit" name="page" value="previous">
-    </form>
 </body>
 </html>

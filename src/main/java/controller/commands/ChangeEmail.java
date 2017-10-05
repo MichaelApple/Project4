@@ -14,7 +14,10 @@ import java.io.IOException;
 import java.util.Optional;
 
 /**
- * Created by Miha on 19.09.2017.
+ * Command that changes user email to new one
+ *
+ * Created by Miha on 20.09.2017.
+ * @author Miha
  */
 public class ChangeEmail implements Action {
 
@@ -23,17 +26,28 @@ public class ChangeEmail implements Action {
     private static final String PARAM_EMAIL = "newEmail";
     private UserService userService = UserService.getInstance();
 
+    /**
+     * Method do validation of user input and
+     * change old email to new one
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @return personal cabinet page
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String pageToGo;
         String email = request.getParameter(PARAM_EMAIL);
 
-        if (!RegExpressions.checkData(request) && email == null)
-            return "/index.jsp";
-
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
+
+        if (!RegExpressions.checkData(request) || email == null) {
+            logger.info("User " + user.getUserName() + " wrong input data");
+            return "/index.jsp";
+        }
 
         Optional<User> optionalUser = userService.changeEmail(user, email);
 
@@ -49,7 +63,6 @@ public class ChangeEmail implements Action {
             pageToGo = "/WEB-INF/views/personal.jsp";
             logger.error("Errors occurred with User " + user.getUserName() + ": ");
         }
-
         return pageToGo;
     }
 }

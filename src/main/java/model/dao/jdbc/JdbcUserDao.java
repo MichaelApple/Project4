@@ -26,7 +26,7 @@ public class JdbcUserDao implements UserDao {
     private static final String CHANGE_EMAIL = "UPDATE users SET email = ? WHERE id = ?;";
     private static final String FIND_ALL_USER_REQUESTS_BRIGADES = "SELECT * FROM brigades\n" +
             "  INNER JOIN requests r ON brigades.request_id = r.id\n" +
-            "  WHERE user_id = ? GROUP BY brigades.id, r.id LIMIT %d OFFSET %d;";
+            "  WHERE user_id = ? ORDER BY brigades.request_id DESC LIMIT 1 OFFSET %d;";
 
     JdbcUserDao(Connection sqlConnection) {
         super();
@@ -104,9 +104,9 @@ public class JdbcUserDao implements UserDao {
         }
     }
 
-    public Map<UserRequest, Brigade> getUserWorkPlan(int id, int limit, int offset) {
+    public Map<UserRequest, Brigade> getUserWorkPlan(int id, int offset) {
         Map<UserRequest, Brigade> userWorkPlan = new HashMap<>();
-        try (PreparedStatement ps = connection.prepareStatement(String.format(FIND_ALL_USER_REQUESTS_BRIGADES, limit, offset))){
+        try (PreparedStatement ps = connection.prepareStatement(String.format(FIND_ALL_USER_REQUESTS_BRIGADES, offset))){
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {

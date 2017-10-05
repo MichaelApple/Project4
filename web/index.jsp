@@ -30,6 +30,12 @@
   </div>
   <div class="container myContainer" style="width: 50%">
       <h1 align="center"><fmt:message key="userRequest.head"/></h1>
+      <c:choose>
+          <c:when test="${not empty requestScope.wrongInput}">
+              <h3 align="center" style="color: red"><fmt:message key="userRequest.wrongInput"/></h3>
+          </c:when>
+      </c:choose>
+      <h3></h3>
         <c:choose>
             <c:when test="${empty sessionScope.user}">
                 <h3><fmt:message key="userRequest.loginfirst"/></h3>
@@ -45,7 +51,7 @@
                       </select>
                   </div>
                   <div class="form-group">
-                      <label for="workScale"><fmt:message key="userRequest.label.workscal"/></label>
+                      <label for="workScale"><fmt:message key="userRequest.label.workscale"/></label>
                       <select class="form-control" id="workScale" name="workScale">
                           <c:forEach items="${workScaleList}" var="workScale">
                               <option>${workScale.toString()}</option>

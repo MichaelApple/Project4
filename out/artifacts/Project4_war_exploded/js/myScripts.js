@@ -9,16 +9,10 @@ jQuery(function($){
 
         switch (name) {
             case "nickName":
-                regex = "[A-z0-9_-]{3,20}$";
+                regex = "[A-zА-я0-9_-]{3,20}$";
                 break;
             case "homePhone":
                 regex = "^\\([0-9]{3}\\)[0-9]{3}-[0-9]{2}-[0-9]{2}$";
-                break;
-            case "cellPhone1":
-                regex = "^\\([0-9]{3}\\)[0-9]{3}-[0-9]{2}-[0-9]{2}$";
-                break;
-            case "cellPhone2":
-                regex = "^.*$";
                 break;
             case "email":
                 regex = "^([A-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$";
@@ -26,17 +20,8 @@ jQuery(function($){
             case "newEmail":
                 regex = "^([A-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$";
                 break;
-            case "skype":
-                regex = "[a-z0-9_-]{3,20}$";
-                break;
-            case "zip":
-                regex = "^[0-9]{5}(?:-[0-9]{4})?$";
-                break;
-            case "flat":
-                regex = "^[0-9]{1,3}[A-z]?$";
-                break;
-            case "buildingNumber":
-                regex = "^[0-9]{1,3}[A-z]?$";
+            case "desiredDateTime":
+                regex = "/(^(((0[1-9]|1[0-9]|2[0-8])[-](0[1-9]|1[012]))|((29|30|31)[-](0[13578]|1[02]))|((29|30)[-](0[4,6,9]|11)))[-](19|[2-9][0-9])\d\d$)|(^29[-]02[-](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)/";
                 break;
             default:
                 regex = "^[A-z0-9_-]{3,20}$";

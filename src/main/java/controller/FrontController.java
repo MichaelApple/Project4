@@ -19,6 +19,9 @@ public class FrontController extends HttpServlet {
 
     private Map<String , Action> actions = new HashMap<>();
 
+    /**
+     * Initiates servlet and fills Map actions
+     */
     @Override
     public void init(){
         actions.put("POST:/register",  new Register());
@@ -26,11 +29,23 @@ public class FrontController extends HttpServlet {
         actions.put("GET:/logout", new Logout());
         actions.put("POST:/changeEmail", new ChangeEmail());
         actions.put("GET:/personal", new Personal());
+        actions.put("POST:/personal", new Personal());
         actions.put("GET:/admin", new AdminPanel());
+        actions.put("POST:/admin", new AdminPanel());
         actions.put("POST:/newRequest", new NewRequest());
     }
 
 
+    /**
+     * This is the main method that takes request method and URI,
+     * composes from it actionPath and than search in actions Map
+     * for matches to perform wright action(command)
+     * and dispatch wright page to show
+     * @param request - browser request
+     * @param response - server response to user
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

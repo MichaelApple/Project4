@@ -15,5 +15,5 @@ public interface UserDao extends GenericDao<User>{
     Optional<User> getUserByEmail(String email);
     void changeEmail(int id, String email);
     boolean checkPassword(String passwordInput, String storedHash);
-    Map<UserRequest, Brigade> getUserWorkPlan(int id, int limit, int offset);
+    Map<UserRequest, Brigade> getUserWorkPlan(int id, int offset);
 }

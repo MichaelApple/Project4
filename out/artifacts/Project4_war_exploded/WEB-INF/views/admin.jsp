@@ -48,21 +48,37 @@
         </div>
     </div>
 </div>
-<c:forEach var="workPlan" items="${requestScope.userWorkPlan}">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="container myContainer">
-                    <h4>Your userRequest: <c:out value="${workPlan.key}"/></h4>
+<div class="container">
+    <c:choose>
+        <c:when test="${empty requestScope.offset}">
+            <c:set var="offset" value="0"/>
+        </c:when>
+        <c:otherwise>
+            <c:set var="offset" value="${requestScope.offset}"/>
+        </c:otherwise>
+    </c:choose>
+    <form class="pagination" action="${pageContext.request.contextPath}/pages/admin" method="post">
+        <input type="hidden" name="offset" value="${offset}">
+        <input type="hidden" name="rowcount" value="${rowcount}">
+        <input type="submit" name="submit" value="previous">
+        <input type="submit" name="submit" value="next">
+    </form>
+    <c:forEach var="workPlan" items="${requestScope.userWorkPlan}">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="container myContainer">
+                        <h4>Your Request: <c:out value="${workPlan.key}"/></h4>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="container myContainer">
-                    <p>${workPlan.value}</p>
+                <div class="col-sm-8">
+                    <div class="container myContainer">
+                        <p>${workPlan.value}</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</c:forEach>
+    </c:forEach>
+</div>
 </body>
 </html>

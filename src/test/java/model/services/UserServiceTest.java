@@ -21,7 +21,7 @@ public class UserServiceTest {
         DaoFactory daoFactory = mock(DaoFactory.class);
         UserDao userDao = mock(UserDao.class);
         DaoConnection daoConnection = mock(DaoConnection.class);
-        UserService userService = new UserService();
+        UserService userService = new UserService(daoFactory);
         User user = new User.Builder()
                 .setUserName("name")
                 .setEmail("email")

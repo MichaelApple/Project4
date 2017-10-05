@@ -10,7 +10,10 @@ import java.util.Properties;
 import java.util.regex.Pattern;
 
 /**
+ * Class that verify user role
+ *
  * Created by Miha on 20.09.2017.
+ * @author Miha
  */
 public class AuthorizationManagerDefaultImpl implements AuthorizationManager {
     private Properties roleMappings;
@@ -18,7 +21,7 @@ public class AuthorizationManagerDefaultImpl implements AuthorizationManager {
 
     /**Load mappings from a properties file on the file system.*/
     public AuthorizationManagerDefaultImpl() {
-        //Read in properties file containing role mappings...
+
         this.roleMappings = new Properties();
         try {
             InputStream inputStream = AuthorizationManagerDefaultImpl.class.getResourceAsStream(MAPPING_PROPERTIES);
@@ -30,8 +33,8 @@ public class AuthorizationManagerDefaultImpl implements AuthorizationManager {
     }
 
     /**
-     *Returns boolean indicating whether user has the appropriate role
-     *for the specified URI.
+     * Returns boolean indicating whether user has the appropriate role
+     * for the specified URI.
      */
     @Override
     public boolean isUserAuthorized(User user, String uri) {
@@ -46,8 +49,6 @@ public class AuthorizationManagerDefaultImpl implements AuthorizationManager {
         while( (!isAuthorized)  &&  (i.hasNext()) ) {
             Map.Entry me = (Map.Entry)i.next();
 
-            //Pattern match.  '*' should be interpreted as a wildcard
-            //for any ASCII character.
             uri = uri.replaceAll("/Project4_war_exploded", "").replaceAll("/pages", "");
 
             String[] allowedPages = ((String)me.getValue()).split(", ");

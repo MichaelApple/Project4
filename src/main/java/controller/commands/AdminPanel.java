@@ -14,21 +14,62 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Created by Miha on 20.09.2017.
+ * Command that opens admin panel
+ * for users with ADMIN role
+ *
+ * @author Miha
  */
 public class AdminPanel implements Action {
 
     private static final Logger logger = Logger.getLogger(Login.class);
     private UserService userService = UserService.getInstance();
 
+    /**
+     * If user exists than he/she will be dispatched to
+     * page "/WEB-INF/views/admin.jsp" and if in request is
+     * offset parameter the right rows will be get from database
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @return page to show user
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String pageToGo;
         HttpSession session = request.getSession();
 
-        Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) session.getAttribute("user"), 3, 1);
-        request.setAttribute("userWorkPlan", userWorkPlan);
+        if (session.getAttribute("user") != null) {
+            int offset = 0;
+            offset = getOffset(request, offset);
 
-        logger.info("User " + session.getAttribute("user").toString() + " entered admin panel");
-        return "/WEB-INF/views/admin.jsp";
+            Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) session.getAttribute("user"), offset);
+            request.setAttribute("userWorkPlan", userWorkPlan);
+
+            pageToGo = "/WEB-INF/views/admin.jsp";
+            logger.info("User " + session.getAttribute("user").toString() + " entered personal cabinet");
+
+        } else {
+            pageToGo = "/WEB-INF/views/error.jsp";
+            logger.error("User " + session.getAttribute("user").toString() + " failed to enter personal cabinet");
+        }
+        return pageToGo;
+    }
+
+    /**
+     * Method that calculate offset
+     * from users request
+     * @param request user request
+     * @param offset - number of request in database from which
+     *               we should get users requests
+     * @return offset
+     */
+    private int getOffset(HttpServletRequest request, int offset) {
+        if (request.getParameter("submit") != null) {
+            offset = Integer.parseInt(request.getParameter("offset"));
+            offset += (request.getParameter("submit").equals("next")) ? 1 : -1;
+            request.setAttribute("offset", offset);
+        }
+        return offset;
     }
 }

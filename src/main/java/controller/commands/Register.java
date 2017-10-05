@@ -15,7 +15,9 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * Created by Miha on 15.09.2017.
+ * Command that that register new user if all input data were correct
+ *
+ * @author Miha
  */
 public class Register implements Action {
 
@@ -27,6 +29,16 @@ public class Register implements Action {
 
     private UserService userService = UserService.getInstance();
 
+    /**
+     * Method validate all user input, creates new user and
+     * writes it to database, creates new session for this user
+     *
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @return page to show user depends on User Role
+     * @throws ServletException
+     * @throws IOException
+     */
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -38,11 +50,10 @@ public class Register implements Action {
         User user;
         boolean status;
 
-        if (!RegExpressions.checkData(request) && name == null && email == null && password == null) {
-            logger.info("Error occurred");
+        if (!RegExpressions.checkData(request) || name == null || email == null || password == null) {
+            logger.info("User inputs wrong data");
             return  "/index.jsp";
         }
-
         user = new User.Builder()
                 .setUserName(name)
                 .setEmail(email)
@@ -56,9 +67,10 @@ public class Register implements Action {
             Cookie userName = new Cookie("user", email);
             response.addCookie(userName);
             request.setAttribute("user", user);
-            Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) request.getSession().getAttribute("user"), 1, 1);
+            Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) request.getSession().getAttribute("user"), 0);
             request.setAttribute("userWorkPlan", userWorkPlan);
-            pageToGo = "/WEB-INF/views/personal.jsp";
+
+            pageToGo = (user.getRole().toString().equals("ADMIN")) ? "/WEB-INF/views/admin.jsp" : "/WEB-INF/views/personal.jsp";
 
             logger.info("User " + user.getUserName() + " is registered");
         } else {
