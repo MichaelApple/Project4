@@ -13,12 +13,11 @@ import java.sql.SQLException;
  */
 public class JdbcDaoFactory extends DaoFactory {
 
-    private static InitialContext ic;
     private static DataSource ds;
 
     public JdbcDaoFactory() {
         try {
-            ic = new InitialContext();
+            InitialContext ic = new InitialContext();
             ds = (DataSource) ic.lookup("jdbc/Project4");
         } catch (NamingException e) {
             e.printStackTrace();

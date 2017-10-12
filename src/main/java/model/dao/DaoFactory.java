@@ -10,7 +10,6 @@ import java.util.Properties;
 public abstract class DaoFactory {
 
     public abstract DaoConnection getConnection();
-//    public abstract UserDao getUserDao();
     public abstract UserDao getUserDao(DaoConnection connection);
     public abstract BrigadeDao getRequestDao(DaoConnection connection);
     public abstract WorkPlanDao getWorkPlanDao(DaoConnection connection);
@@ -18,7 +17,7 @@ public abstract class DaoFactory {
 
     private static DaoFactory instance;
 
-    public static final String DB_FILE = "/db.properties";
+    private static final String DB_FILE = "/db.properties";
     private static final String DB_FACTORY_CLASS = "factory.class";
 
     public static DaoFactory getInstance() {

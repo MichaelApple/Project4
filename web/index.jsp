@@ -17,6 +17,8 @@
                   <fmt:message key="user.exist"/>
               </c:when>
           </c:choose>
+      </h2>
+      <h2 align="center">
           <fmt:message key="index.hello"/>
           <c:choose>
               <c:when test="${empty sessionScope.user}">

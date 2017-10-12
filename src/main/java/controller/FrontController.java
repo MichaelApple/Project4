@@ -52,7 +52,7 @@ public class FrontController extends HttpServlet {
         String method = request.getMethod().toUpperCase();
         String path = request.getRequestURI();
 
-        path = path.replaceAll(".*Project4_war_exploded/pages", "").replaceAll("/pages", "").replaceAll("\\d+", "");
+        path = path.replaceAll(".*Project4_war_exploded/pages", "").replaceAll("\\d+", "");
 
         String actionKey = method + ":" + path;
         Action action = actions.getOrDefault(actionKey, (re, res) -> "/index.jsp");
