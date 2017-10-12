@@ -55,12 +55,17 @@
                 <c:set var="offset" value="${requestScope.offset}"/>
             </c:otherwise>
         </c:choose>
-        <form class="pagination" action="${pageContext.request.contextPath}/pages/personal" method="post">
-            <input type="hidden" name="offset" value="${offset}">
-            <input type="hidden" name="rowcount" value="${rowcount}">
-            <input type="submit" name="submit" value="previous">
-            <input type="submit" name="submit" value="next">
-        </form>
+        <c:choose>
+            <c:when test="${empty requestScope.userWorkplan}">
+                <form class="pagination" action="${pageContext.request.contextPath}/pages/personal" method="post">
+                    <input type="hidden" name="offset" value="${offset}">
+                    <input type="hidden" name="rowcount" value="${rowcount}">
+                    <input type="submit" name="submit" value="previous">
+                    <input type="submit" name="submit" value="next">
+                </form>
+            </c:when>
+        </c:choose>
+
     <c:forEach var="workPlan" items="${requestScope.userWorkPlan}">
     <div class="container">
         <div class="row">

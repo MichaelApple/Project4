@@ -9,8 +9,8 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-09-23.18:29:27.549</IntrospectionTimestamp>
-      <IntrospectionStateNumber>736</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-10-12.12:01:24.969</IntrospectionTimestamp>
+      <IntrospectionStateNumber>765</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -193,56 +193,66 @@
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="38" parent="15" name="users_pkey">
+    <index id="38" parent="15" name="emailconstr">
+      <ObjectId>24678</ObjectId>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="39" parent="15" name="users_pkey">
       <ObjectId>16411</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="39" parent="16" name="id">
+    <key id="40" parent="15" name="emailconstr">
+      <ObjectId>24679</ObjectId>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>emailconstr</UnderlyingIndexName>
+    </key>
+    <column id="41" parent="16" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>725</StateNumber>
       <DefaultExpression>nextval(&apos;workplan_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="40" parent="16" name="request_id">
+    <column id="42" parent="16" name="request_id">
       <Position>3</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>725</StateNumber>
     </column>
-    <column id="41" parent="16" name="brigade_id">
+    <column id="43" parent="16" name="brigade_id">
       <Position>4</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>725</StateNumber>
     </column>
-    <column id="42" parent="16" name="desireddate">
+    <column id="44" parent="16" name="desireddate">
       <Position>5</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>736</StateNumber>
     </column>
-    <index id="43" parent="16" name="workplan_pkey">
+    <index id="45" parent="16" name="workplan_pkey">
       <ObjectId>24657</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="44" parent="16" name="workplan_pkey">
+    <key id="46" parent="16" name="workplan_pkey">
       <ObjectId>24658</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>workplan_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="45" parent="16" name="workplan_requests_id_fk">
+    <foreign-key id="47" parent="16" name="workplan_requests_id_fk">
       <ObjectId>24664</ObjectId>
       <ColNames>request_id</ColNames>
       <RefTableName>requests</RefTableName>
       <RefKeyName>requests_pkey1</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="46" parent="16" name="workplan_brigades_id_fk">
+    <foreign-key id="48" parent="16" name="workplan_brigades_id_fk">
       <ObjectId>24669</ObjectId>
       <ColNames>brigade_id</ColNames>
       <RefTableName>brigades</RefTableName>

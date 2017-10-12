@@ -68,7 +68,7 @@ public class Personal implements Action {
     private int getOffset(HttpServletRequest request, int offset) {
         if (request.getParameter("submit") != null) {
             offset = Integer.parseInt(request.getParameter("offset"));
-            offset += (request.getParameter("submit").equals("next")) ? 1 : -1;
+            offset += (request.getParameter("submit").equals("next")) ? 2 : -2;
             request.setAttribute("offset", offset);
         }
         return offset;

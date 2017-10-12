@@ -26,7 +26,7 @@ public class JdbcUserDao implements UserDao {
     private static final String CHANGE_EMAIL = "UPDATE users SET email = ? WHERE id = ?;";
     private static final String FIND_ALL_USER_REQUESTS_BRIGADES = "SELECT * FROM brigades\n" +
             "  INNER JOIN requests r ON brigades.request_id = r.id\n" +
-            "  WHERE user_id = ? ORDER BY brigades.request_id DESC LIMIT 1 OFFSET %d;";
+            "  WHERE user_id = ? ORDER BY brigades.request_id DESC LIMIT 2 OFFSET %d;";
 
     JdbcUserDao(Connection sqlConnection) {
         super();

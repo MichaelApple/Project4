@@ -73,7 +73,7 @@ public class UserService {
     }
 
     /**
-     * Method changes user email to new one
+     * Method changes user email to new one that user input
      * @param user user who wants to change his email
      * @param newEmail user new email
      * @return user with changed email

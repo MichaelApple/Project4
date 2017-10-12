@@ -32,11 +32,11 @@ public class UserServiceTest {
 
         when(daoFactory.getConnection()).thenReturn(daoConnection);
         when(daoFactory.getUserDao(anyObject())).thenReturn(userDao);
-        when(userDao.getUserByEmail(user.getEmail()).isPresent()).thenReturn(fake);
+        when(userDao.getUserByEmail(user.getEmail()).isPresent()).thenReturn(false);
 
         boolean register = userService.register(user);
 
-        assertEquals(fake, register);
+        assertEquals(false, register);
     }
 
 
