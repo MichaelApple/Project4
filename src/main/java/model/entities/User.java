@@ -1,5 +1,7 @@
 package model.entities;
 
+import java.util.Objects;
+
 /**
  * Created by Miha on 03.09.2017.
  */
@@ -104,4 +106,21 @@ public class User {
                 ", role=" + role +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        User user = (User) obj;
+
+        return id == user.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
+    }
+
+
 }

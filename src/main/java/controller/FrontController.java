@@ -33,6 +33,8 @@ public class FrontController extends HttpServlet {
         actions.put("GET:/admin", new AdminPanel());
         actions.put("POST:/admin", new AdminPanel());
         actions.put("POST:/newRequest", new NewRequest());
+        actions.put("POST:/deleteRequest", new DeleteRequest());
+        actions.put("POST:/deleteRequest", new ApproveRequest());
     }
 
 

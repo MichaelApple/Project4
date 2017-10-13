@@ -49,24 +49,24 @@ public class JdbcBrigadeDao implements BrigadeDao {
 
     @Override
     public int createRequest(UserRequest userRequest) {
-//        try (PreparedStatement ps = connection.prepareStatement(CREATE_REQUEST, Statement.RETURN_GENERATED_KEYS)) {
-//            ps.setInt(1, userRequest.getUserId());
-//            ps.setString(2, userRequest.getWorkKind().toString());
-//            ps.setString(3, userRequest.getWorkScale().toString());
-//            ps.setString(4, userRequest.getDesiredDateTime().toString());
-//            int id = ps.executeUpdate();
-//
-//            try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
-//                if (generatedKeys.next()) {
-//                    userRequest.setId(generatedKeys.getInt(1));
-//                }
-//                else {
-//                    throw new SQLException("Creating user failed, no ID obtained.");
-//                }
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
+        try (PreparedStatement ps = connection.prepareStatement(CREATE_REQUEST, Statement.RETURN_GENERATED_KEYS)) {
+            ps.setInt(1, userRequest.getUserId());
+            ps.setString(2, userRequest.getWorkKind().toString());
+            ps.setString(3, userRequest.getWorkScale().toString());
+            ps.setString(4, userRequest.getDesiredDateTime().toString());
+            ps.executeUpdate();
+
+            try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    userRequest.setId(generatedKeys.getInt(1));
+                }
+                else {
+                    throw new SQLException("Creating user failed, no ID obtained.");
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return  userRequest.getId();
     }
 }

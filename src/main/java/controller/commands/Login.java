@@ -62,7 +62,10 @@ public class Login implements Action {
             session.setAttribute("user", user);
             Cookie userName = new Cookie("user", email);
             response.addCookie(userName);
-            Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) session.getAttribute("user"), 0);
+
+            int offset = 0;
+
+            Map<UserRequest, Brigade> userWorkPlan = user.getRole().toString().equals("ADMIN") ? userService.showAllWorkPlan((User) session.getAttribute("user"), offset) : userService.showUserWorkPlan((User) session.getAttribute("user"), 0);
             request.setAttribute("userWorkPlan", userWorkPlan);
             request.setAttribute("user", user);
 

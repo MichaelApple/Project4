@@ -81,6 +81,17 @@
                 <div class="container myContainer">
                     <p>Brigade destination: ${workPlan.value.name}</p>
                     <p>Number of workers: ${workPlan.value.workerCount}</p>
+
+                    <form action="${pageContext.request.contextPath}/pages/deleteRequest" method="post">
+                        <div class="form-group">
+                            <p><c:out value="${workPlan.key.id}"/></p>
+                            <input type="hidden" class="form-control" name="requestId" id="" value="<c:out value="${workPlan.key.id}"/>">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-sm btn-primary" value="Delete Request">
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>

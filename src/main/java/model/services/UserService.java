@@ -112,4 +112,14 @@ public class UserService {
         }
         return userWorkPlan;
     }
+    public Map<UserRequest, Brigade> showAllWorkPlan(User user, int offset) {
+        Map<UserRequest, Brigade> userWorkPlan;
+        try (DaoConnection daoConnection = daoFactory.getConnection()){
+            daoConnection.begin();
+            UserDao userDao = daoFactory.getUserDao(daoConnection);
+            userWorkPlan = userDao.getAll(user.getId(), offset);
+            daoConnection.commit();
+        }
+        return userWorkPlan;
+    }
 }

@@ -43,8 +43,9 @@ public class AdminPanel implements Action {
             int offset = 0;
             offset = getOffset(request, offset);
 
-            Map<UserRequest, Brigade> userWorkPlan = userService.showUserWorkPlan((User) session.getAttribute("user"), offset);
+            Map<UserRequest, Brigade> userWorkPlan = userService.showAllWorkPlan((User) session.getAttribute("user"), offset);
             request.setAttribute("userWorkPlan", userWorkPlan);
+            System.out.println(userWorkPlan.size());
 
             pageToGo = "/WEB-INF/views/admin.jsp";
             logger.info("User " + session.getAttribute("user").toString() + " entered personal cabinet");

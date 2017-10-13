@@ -2,6 +2,7 @@ package model.services;
 
 import model.dao.DaoConnection;
 import model.dao.DaoFactory;
+import model.dao.UserDao;
 import model.dao.WorkPlanDao;
 import model.entities.UserRequest;
 import model.entities.WorkPlan;
@@ -63,6 +64,22 @@ public class DispatcherRequestService {
         return workPlan != null ? Optional.of(workPlan) : Optional.empty();
     }
 
+    public void deleteRequest(int requestId) {
+        try (DaoConnection daoConnection = daoFactory.getConnection()){
+            WorkPlanDao dao = daoFactory.getWorkPlanDao(daoConnection);
+            dao.delete(requestId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void approveRequest(int id) {
+        try (DaoConnection daoConnection = daoFactory.getConnection()){
+            WorkPlanDao dao = daoFactory.getWorkPlanDao(daoConnection);
+            dao.approve(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }

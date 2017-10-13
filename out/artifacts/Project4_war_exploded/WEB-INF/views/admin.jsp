@@ -68,12 +68,25 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="container myContainer">
-                        <h4>Your Request: <c:out value="${workPlan.key}"/></h4>
+                        <h4>Your Request: <c:out value="${workPlan.key.id}"/></h4>
+                        <p>Request workKind: ${workPlan.key.workKind}</p>
+                        <p>Request workScale: ${workPlan.key.workScale}</p>
+                        <p>Request Desired Date: ${workPlan.key.desiredDateTime}</p>
                     </div>
                 </div>
                 <div class="col-sm-8">
                     <div class="container myContainer">
-                        <p>${workPlan.value}</p>
+                        <p>Brigade destination: ${workPlan.value.name}</p>
+                        <p>Number of workers: ${workPlan.value.workerCount}</p>
+
+                        <form action="${pageContext.request.contextPath}/pages/approveRequest" method="post">
+                            <div class="form-group">
+                                <input type="hidden" class="form-control" name="requestId" id="" value="<c:out value="${workPlan.key.id}"/>">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-sm btn-primary" value="Approve Request">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

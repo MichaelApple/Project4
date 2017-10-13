@@ -26,8 +26,12 @@ public class JdbcUserDao implements UserDao {
     private static final String CHANGE_EMAIL = "UPDATE users SET email = ? WHERE id = ?;";
     private static final String FIND_ALL_USER_REQUESTS_BRIGADES = "SELECT * FROM brigades\n" +
             "  INNER JOIN requests r ON brigades.request_id = r.id\n" +
-            "  WHERE user_id = ? ORDER BY brigades.request_id DESC LIMIT 2 OFFSET %d;";
+            "  WHERE user_id = ? AND approve is true ORDER BY brigades.request_id DESC LIMIT 2 OFFSET %d;";
 
+    private static final String FIND_ALL_REQUESTS_BRIGADES = "SELECT * FROM brigades\n" +
+            " INNER JOIN requests r ON brigades.request_id = r.id\n" +
+            " WHERE " +
+            " ORDER BY brigades.request_id DESC";
     JdbcUserDao(Connection sqlConnection) {
         super();
         this.connection = sqlConnection;
@@ -124,6 +128,28 @@ public class JdbcUserDao implements UserDao {
             e.printStackTrace();
         }
 
+        return userWorkPlan;
+    }
+
+    @Override
+    public Map<UserRequest, Brigade> getAll(int id, int offset) {
+        Map<UserRequest, Brigade> userWorkPlan = new HashMap<>();
+        try (PreparedStatement ps = connection.prepareStatement(String.format(FIND_ALL_REQUESTS_BRIGADES, offset))){
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                UserRequest userRequest = new UserRequest.RequestBuilder()
+                        .setId(rs.getInt("id"))
+                        .setUserId(id)
+                        .setWorkKind(WorkKind.valueOf(rs.getString("workkind").toUpperCase()))
+                        .setWorkScale(WorkScale.valueOf(rs.getString("workscale").toUpperCase()))
+                        .setDesiredDateTime(LocalDate.parse(rs.getString("desiredtime")))
+                        .build();
+                userWorkPlan.put(userRequest, new BrigadeFactory().createBrigade(userRequest));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return userWorkPlan;
     }
 

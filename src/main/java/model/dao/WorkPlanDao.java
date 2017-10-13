@@ -11,4 +11,5 @@ public interface WorkPlanDao extends GenericDao<WorkPlan> {
     int createRequest(UserRequest userRequest);
     int createBrigade(Brigade brigade);
 
+    void approve(int id);
 }

@@ -58,7 +58,7 @@ public class RegExpressions {
             for (Map.Entry<String, String> entry : REG_EXPRESSION_MAP.entrySet()) {
                 if (entry.getKey().equals(paramName)) {
                     String value = request.getParameter(paramName);
-                        return value.matches(entry.getValue());
+                    return value.matches(entry.getValue());
                 }
             }
         }

@@ -9,13 +9,13 @@ jQuery(function($){
 
         switch (name) {
             case "name":
-                regex = "^[А-яїЇA-z0-9-_]{3,20}$";
+                regex = "^[А-яїЇєЄA-z0-9-_' ]{3,20}$";
                 break;
             case "homePhone":
                 regex = "^\\([0-9]{3}\\)[0-9]{3}-[0-9]{2}-[0-9]{2}$";
                 break;
             case "email":
-                regex = "^([A-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$";
+                regex = "^([A-z0-9_\\.-])@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$";
                 break;
             case "newEmail":
                 regex = "^([A-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$";

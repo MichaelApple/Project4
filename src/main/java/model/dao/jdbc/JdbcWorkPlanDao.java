@@ -19,6 +19,8 @@ public class JdbcWorkPlanDao implements WorkPlanDao {
     private static final String CREATE_WORKPLAN = "INSERT INTO workplan (request_id, brigade_id, desireddate) VALUES (?,?,?);";
     private static final String CREATE_REQUEST = "INSERT INTO requests(user_id, workkind, workscale, desiredtime) VALUES (?,?,?,?);";
     private static final String CREATE_BRIGADE = "INSERT INTO brigades(workercount, name, request_id) VALUES (?,?,?);";
+    private static final String DELETE_BRIGADE = "DELETE FROM brigades WHERE id = (SELECT id FROM brigades WHERE id = ?)";
+    private static final String APPROVE_REQUEST = "DELETE FROM requests WHERE id = ?";
 
     JdbcWorkPlanDao(Connection connection) {
         super();
@@ -55,7 +57,12 @@ public class JdbcWorkPlanDao implements WorkPlanDao {
 
     @Override
     public void delete(int id) {
-
+        try (PreparedStatement ps = connection.prepareStatement(DELETE_BRIGADE)){
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -95,6 +102,16 @@ public class JdbcWorkPlanDao implements WorkPlanDao {
             e.printStackTrace();
         }
         return brigade.getId();
+    }
+
+    @Override
+    public void approve(int id) {
+        try (PreparedStatement ps = connection.prepareStatement(APPROVE_REQUEST)){
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 
